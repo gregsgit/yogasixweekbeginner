@@ -1,59 +1,63 @@
 \documentclass{book}
 
+\usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage[pdftex]{graphicx}
 \usepackage{enumitem}
 \usepackage{textcomp}   % for degree symbol
+\usepackage{titlesec}
 \usepackage{wrapfig}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{xstring}
 
 
 % Pose shortcodes
-\newcommand{\pose}[1]{\emph{#1}}
+\newcommand{\apose}[1]{\emph{#1}}
 %
-\newcommand{\ams}{\pose{Adho Mukha Svanasana}}
-\newcommand{\ardhal}{\pose{Ardha Halasana}}
-\newcommand{\ardchand}{\pose{Ardha Chandrasana}}
-\newcommand{\badd}{\pose{Baddhanguliyasana}}
-\newcommand{\badhasttad}{\pose{Baddha Hasta Tadasana}}
-\newcommand{\badhastutt}{\pose{Baddha Hasta Uttanasana}}
-\newcommand{\dand}{\pose{Dandasana}}
-\newcommand{\ekapadsarv}{\pose{Eka Pada Sarvangasana}}
-\newcommand{\gomu}{\pose{Gomukasana}}
-\newcommand{\hal}{\pose{Halasana}}
-\newcommand{\karn}{\pose{Karnapidasana}}
-\newcommand{\nam}{\pose{Namaskarasana}}
-\newcommand{\padadand}{\pose{Padanghusta Dandasana}}
-\newcommand{\padang}{\pose{Padangusthasana}}
+\newcommand{\ams}{\apose{Adho Mukha Svanasana}}
+\newcommand{\ardhal}{\apose{Ardha Halasana}}
+\newcommand{\ardchand}{\apose{Ardha Chandrasana}}
+\newcommand{\badd}{\apose{Baddhanguliyasana}}
+\newcommand{\badhasttad}{\apose{Baddha Hasta Tadasana}}
+\newcommand{\badhastutt}{\apose{Baddha Hasta Uttanasana}}
+\newcommand{\dand}{\apose{Dandasana}}
+\newcommand{\ekapadsarv}{\apose{Eka Pada Sarvangasana}}
+\newcommand{\gomu}{\apose{Gomukasana}}
+\newcommand{\hal}{\apose{Halasana}}
+\newcommand{\karn}{\apose{Karnapidasana}}
+\newcommand{\nam}{\apose{Namaskarasana}}
+\newcommand{\padadand}{\apose{Padanghusta Dandasana}}
+\newcommand{\padang}{\apose{Padangusthasana}}
 \newcommand{\parshastpad}{Parsva Hasta Padasana}
-\newcommand{\parsvo}{\pose{Parsvottanasana}}
-\newcommand{\paschi}{\pose{Paschimottanasana}}
-\newcommand{\paschbadhast}{\pose{Paschima Baddha Hastasana}}
-\newcommand{\paschnama}{\pose{Paschima Namaskarasana}}
-\newcommand{\praspad}{\pose{Prasarita Padottanasana}}
-\newcommand{\sarv}{\pose{Salamba Sarvangasana}}
-\newcommand{\sav}{\pose{Savasana}}
-\newcommand{\setubandsarv}{\pose{Setu Bandha Sarvangasana}}
-\newcommand{\tad}{\pose{Tadasana}}
-\newcommand{\urdbad}{\pose{Urdhva Baddhanguliyasana}}
-\newcommand{\urdhast}{\pose{Urdhva Hastasana}}
-\newcommand{\urdhastdand}{\pose{Urdhva Hasta Dandasana}}
-\newcommand{\urdnam}{\pose{Urdhva Namaskarasana}}
-\newcommand{\utka}{\pose{Utkatasana}}
-\newcommand{\utt}{\pose{Uttanasana}}
-\newcommand{\utthastpad}{\pose{Utthita Hasta Padasana}}
-\newcommand{\uttparsva}{\pose{Utthita Parsvakonasana}}
-\newcommand{\utttrik}{\pose{Utthita Trikonasana}}
-\newcommand{\vim}{\pose{Vimanasana}}
-\newcommand{\virai}{\pose{Virabhdrasana I}}
-\newcommand{\viraii}{\pose{Virabhadrasana II}}
-\newcommand{\vrk}{\pose{Vrksasana}}
+\newcommand{\parsvo}{\apose{Parsvottanasana}}
+\newcommand{\paschi}{\apose{Paschimottanasana}}
+\newcommand{\paschbadhast}{\apose{Paschima Baddha Hastasana}}
+\newcommand{\paschnama}{\apose{Paschima Namaskarasana}}
+\newcommand{\praspad}{\apose{Prasarita Padottanasana}}
+\newcommand{\sarv}{\apose{Salamba Sarvangasana}}
+\newcommand{\sav}{\apose{Savasana}}
+\newcommand{\setubandsarv}{\apose{Setu Bandha Sarvangasana}}
+\newcommand{\tad}{\apose{Tadasana}}
+\newcommand{\urdbad}{\apose{Urdhva Baddhanguliyasana}}
+\newcommand{\urdhast}{\apose{Urdhva Hastasana}}
+\newcommand{\urdhastdand}{\apose{Urdhva Hasta Dandasana}}
+\newcommand{\urdnam}{\apose{Urdhva Namaskarasana}}
+\newcommand{\utka}{\apose{Utkatasana}}
+\newcommand{\utt}{\apose{Uttanasana}}
+\newcommand{\utthastpad}{\apose{Utthita Hasta Padasana}}
+\newcommand{\uttparsva}{\apose{Utthita Parsvakonasana}}
+\newcommand{\utttrik}{\apose{Utthita Trikonasana}}
+\newcommand{\vim}{\apose{Vimanasana}}
+\newcommand{\virai}{\apose{Virabhdrasana I}}
+\newcommand{\viraii}{\apose{Virabhadrasana II}}
+\newcommand{\vrk}{\apose{Vrksasana}}
 
 \newcommand{\poseFig}[1]{
   \begin{wrapfigure}{r}{2.1in}
       \begin{center}
         \includegraphics[width=2.0in]{Figures/{"#1"}.jpg}
       \end{center}
+      \caption{{#1}}
     \end{wrapfigure}
 }
 
@@ -95,22 +99,47 @@
 \newcommand{\viraiiFig}{\poseFig{Virabhadrasana II}}
 \newcommand{\vrkFig}{\poseFig{Vrksasana}}
 
-
-
 % \PC{week}{pose #}
-\newcommand{\PC}[2]{\hfill(Week #1, Pose #2 in PC)}
+\newcommand{\PC}[2]{{\normalfont \hfill(Week #1, Pose #2 in PC)}}
 
 % \term{xxx} - introduce a standard Iyengar word or phrase
 \newcommand{\term}[1]{``{#1}''}
 
 % \newpose{xxx} - first time this pose has been used in course
-\newcommand{\newpose}[1]{{\color{Blue}{#1}}}
+% \newcommand{\newpose}[1]{{\color{Blue}{#1}}}
+\newcommand{\newpose}[1]{{{#1}}}
 
 \newcounter{week}
+\newcounter{pose}
 
-% list of poses for a week
-\newlist{poselist}{enumerate}{1}
-\setlist[poselist]{label=w\arabic{week}.\arabic*}
+\newcommand{\week}[1]
+{ \IfDecimal{#1}{\setcounter{week}{\integerpart}}{fooey}
+  \setcounter{pose}{1}
+  \chapter{Week {#1}}}
+
+% a week is a chapter
+\titleformat{\chapter}[frame]
+{} % format
+{} % label
+{8pt} % sep
+{\Large\bfseries\filcenter} % before-code
+{} % after-code
+
+% a pose is a subsection
+\newcommand{\pose}{\subsection}
+\titleformat{\subsection}[hang]
+{\normalfont} % format
+{w\theweek.p\thepose} % label
+{0.5em} % sep
+{\refstepcounter{pose}} % before-code
+{} % after-code
+
+\titlespacing{\subsectino}
+{-2.0ex} % left
+{1.5ex plus .1ex minus .2ex} % before-sep
+{1pc} % after-sep
+% [] % right-sep
+
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex}
@@ -151,7 +180,7 @@ Course''\cite{GeetaPC},
 Of course, Preliminary Course gives a 28-week syllabus, and for this
 assignment we are creating only a 6-week course.
 
-The immediate goals of the first few classes is to help students
+The immediate goals of the first few classes are to help students
 familiarize themselves with their bodies, and also with the
 terminology we use to describe motions and poses in Iyengar Yoga
 classes.
@@ -180,18 +209,16 @@ w2.4 \nam{} \PC{2}{4}
 
 \addcontentsline{toc}{section}{Formatting Notes}
 
-Pose names are italicized, as in \pose{this is a pose name}.
+Pose names are italicized, as in \apose{this is a pose name}.
 
 A new pose (not introduced earlier) will be both italicized and
-colored blue, as in \newpose{\pose{this is a new pose}}.
+colored blue, as in \newpose{\apose{this is a new pose}}.
 
 Images of poses are taken from \emph{Preliminary Course}, as I do not
 yet have images of myself in the poses.
 
-\chapter{Week 1}
-\label{chap:week1}
-
-\setcounter{week}{1}
+\week{1}
+\label{week:1}
 
 \textbf{Themes}: What is yoga? Your body in space.
 
@@ -201,29 +228,34 @@ life; how looking for alignment and balance in asana can be brought
 life.
 
 \section{Sequence for Week 1}
-\label{chap:seq1}
+\label{seq:1}
 
-\begin{poselist}
-\item \newpose{\sav{}} \hfill(not given as first pose in PC)
-  \amsFig
-  \begin{itemize}
-  \item Have several blankets available if needed.
-  \item Lie flat; legs together, toes pointing towards ceiling. Knees
-    pointing to ceiling. Hips level. Feel what parts of your body are
-    touching the ground. Is there equal weight on both heels? Both
-    buttocks? Shoulder blades?
-  \item Now bring your arms over your head. Can you reach all the way
-    to the ground? Use blankets if need support. How close are hands;
-    can you bring them closer together? Rotate your arms so that your
-    palms face the ceiling. Now reverse the rotation; which causes the
-    shoulder blades to separate? Try rolling the upper arms (nearer
-    the shoulders) \term{inward} so that palms turn toward floor. Now keep
-    upper arms turned in, but make palms parallel.
-  \item Now try to increase the distance between top of shoulders and
-    ears (i.e. lower shoulders) while keeping arms straight above
-    head.
-  \end{itemize}
-\item \newpose{\tad{}}, against a wall \PC{1}{1}
+\pose{\newpose{\sav{}} \hfill(not given as first pose in PC)}
+
+\amsFig
+
+
+Have several blankets available if needed.
+
+Lie flat; legs together, toes pointing towards ceiling. Knees pointing
+to ceiling. Hips level. Feel what parts of your body are touching the
+ground. Is there equal weight on both heels? Both buttocks? Shoulder
+blades?
+
+
+Now bring your arms over your head. Can you reach all the way to the
+ground? Use blankets if need support. How close are hands; can you
+bring them closer together? Rotate your arms so that your palms face
+the ceiling. Now reverse the rotation; which causes the shoulder
+blades to separate? Try rolling the upper arms (nearer the shoulders)
+\term{inward} so that palms turn toward floor. Now keep upper arms
+turned in, but make palms parallel.
+
+Now try to increase the distance between top of shoulders and ears
+(i.e. lower shoulders) while keeping arms straight above head.
+
+\pose{\newpose{\tad{}}, against a wall \PC{1}{1}}
+
   \begin{itemize}
   \item Now we are going to attempt to replicate the pose we just did
     on the floor, with the help of gravity, while standing.
@@ -247,7 +279,9 @@ life.
     Savasana. Your heels, buttocks', shoulder blades, and back of
     head.
   \end{itemize}
-\item \newpose{\urdhast{}} \PC{1}{2}
+
+\pose{\newpose{\urdhast{}} \PC{1}{2}}
+
   \begin{itemize}
   \item Now raise your arms above your head. This is called \urdhast{}
     (arms). Recall where they were when you were on your back; can you
@@ -257,7 +291,8 @@ life.
   \item Lower shoulders away from ears.
   \end{itemize}
 
-\item \newpose{\urdbad{}} \PC{1}{3}
+\pose{\newpose{\urdbad{}} \PC{1}{3}}
+
   \begin{itemize}
   \item Bring your arms down to pointing straight in front of you.
   \item Clasp your hands. Note which thumb is on top. 
@@ -269,29 +304,34 @@ life.
     other thumb is on top, repeat.
   \end{itemize}
 
-\item	\newpose{\nam{}} \PC{1}{4}
-\item	\newpose{\urdnam{}} from \urdhast{} \PC{1}{5}
-\end{poselist}
+\pose{\newpose{\nam{}} \PC{1}{4}}
+
+\pose{\newpose{\urdnam{}} from \urdhast{} \PC{1}{5}}
+
 
 \textbf{Interlude}. So far everything has been perfectly straight and
 balanced, left to right, top to bottom. Now we're going to branch out.
 
-\begin{poselist}[resume]
-\item \newpose{Half \utt} (made up - not in PC)
+\pose{\newpose{Half \utt} (made up - not in PC)}
+
   \begin{itemize}
   \item Bring mats to wall.
   \item Stand legs-distance from wall. Lean over so that torso is
     parallel to floor, forming right angle; hands touching wall. Above
     waist is Urdhva Hastasana (rotated 90\textdegree). Below waist is \tad.
   \end{itemize}
-\item \newpose{\utthastpad} \PC{1}{6}
+
+\pose{\newpose{\utthastpad} \PC{1}{6}}
+
   \begin{itemize}
   \item Left foot to wall.
   \item Separate feet 4-5 feet apart. Arms out, parallel to
     floor. Even balance front-to-back, left to right.
   \item Lift trunk and chest. Lower shoulders
   \end{itemize}
-\item \newpose{\parshastpad} \PC{1}{7}
+
+\pose{\newpose{\parshastpad} \PC{1}{7}}
+
   \begin{itemize}
   \item Turn right leg out 90\textdegree. Right heel in line with
     center of left foot (both feet centered on mat). Toes pointing
@@ -300,7 +340,9 @@ balanced, left to right, top to bottom. Now we're going to branch out.
     edge of mat; torso facing forward; face facing forward. Are hips
     even (same height)?
   \end{itemize}
-\item \newpose{\utttrik} \PC{1}{8}
+
+\pose{\newpose{\utttrik} \PC{1}{8}}
+
   \begin{itemize}
   \item Extend the right arm out as you bend at the waist and bring
     the right arm down to the shin. Place your left arm on your left
@@ -314,13 +356,12 @@ balanced, left to right, top to bottom. Now we're going to branch out.
     gives feedback to buttocks, shoulder blades, and head about
     alignment.
   \end{itemize}
-\end{poselist}
 
 (repeat Utthita Hasta Padasana, Parsva Hasta Padasana, Utthita
 Trikonasana) on opposite side (left foot to the wall).
 
-\begin{poselist}[resume]
-\item \newpose{\parsvo} (concave back) \PC{1}{9}
+\pose{\newpose{\parsvo} (concave back) \PC{1}{9}}
+
   \begin{itemize}
   \item Grab two blocks.
   \item Left foot to wall, Parsva Hasta Padasana. Now turn back foot
@@ -333,7 +374,9 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Put blocks at whatever height allows you to keep concave back.
   \item Repeat with right foot to wall.
   \end{itemize}
-\item \newpose{\praspad} (concave back) \PC{1}{10}
+
+\pose{\newpose{\praspad} (concave back) \PC{1}{10}}
+
   \begin{itemize}
   \item Wide separation of feet. Feet parallel to each other; even
     w.r.t. distance from edge of mat.
@@ -343,26 +386,30 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Hips over (in line with) feet. Weight even front-to-back on
     feet. Feet flat, weight even inner-to-outer on feet.
   \end{itemize}
-\item \newpose{\dand}  \PC{1}{11}
-\item \newpose{\urdhastdand} \PC{1}{12}
-\item \newpose{\padadand} \PC{1}{13}
+
+\pose{\newpose{\dand}  \PC{1}{11}}
+
+\pose{\newpose{\urdhastdand} \PC{1}{12}}
+
+\pose{\newpose{\padadand} \PC{1}{13}}
+
   \begin{itemize}
   \item Use a belt for integrity of back.
   \item Concave back
   \end{itemize}
-\item \newpose{\paschi} \PC{1}{14}
+
+\pose{\newpose{\paschi} \PC{1}{14}}
+
   \begin{itemize}
   \item This is a good time to remind students to not be attached to
     the perfect form/geometry of the asana, but to consider the goals.
   \end{itemize}
-\item \sav
-\end{poselist}
+
+\pose{\sav}
 
 
-\chapter{Week 2}
-\label{chap:week2}
-
-\setcounter{week}{2}
+\week{2}
+\label{week:2}
 
 \textbf{Themes}: 
 
@@ -370,18 +417,18 @@ Trikonasana) on opposite side (left foot to the wall).
 
 
 \section{Sequence for Week 2}
-\label{chap:seq2}
+\label{seq:2}
 
-\begin{poselist}
-\item \tad{} \PC{2}{1}
-\item \urdhast{} \PC{2}{2}
-\item \urdbad{} \PC{2}{3}
-\item \nam{} \PC{2}{4}
-\item \urdnam{} \PC{2}{5}
-\item \utthastpad{} \PC{2}{6}
-\item \parshastpad{} \PC{2}{7}
-\item \utttrik{} \PC{2}{8}
-\item \newpose{\viraii} \PC{2}{9}
+\pose{ \tad{} \PC{2}{1}}
+\pose{ \urdhast{} \PC{2}{2}}
+\pose{ \urdbad{} \PC{2}{3}}
+\pose{ \nam{} \PC{2}{4}}
+\pose{ \urdnam{} \PC{2}{5}}
+\pose{ \utthastpad{} \PC{2}{6}}
+\pose{ \parshastpad{} \PC{2}{7}}
+\pose{ \utttrik{} \PC{2}{8}}
+\pose{ \newpose{\viraii} \PC{2}{9}}
+
   \begin{itemize}
   \item Start in \parshastpad{} - as in start of \utttrik{}.
   \item (do pose with hands on waist first, then with arms extended)
@@ -390,7 +437,9 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Look over front arm.
   \item Repeat on other side
   \end{itemize}
-\item \newpose{\uttparsva} \PC{2}{10}
+
+\pose{ \newpose{\uttparsva} \PC{2}{10}}
+
   \begin{itemize}
   \item Again, start in \parshastpad{}
   \item Again, bend right knee to 90\textdegree
@@ -402,19 +451,27 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Rotate left arm as in \utthastpad{}
   \item See if you can bring arm down alongside ear.
   \end{itemize}
-\item \parsvo{} (standing, then concave back) \PC{2}{11}
-\item \newpose{\parsvo{}} \PC{2}{12}
+
+\pose{ \parsvo{} (standing, then concave back) \PC{2}{11}}
+
+\pose{ \newpose{\parsvo{}} \PC{2}{12}}
+
   \begin{itemize}
   \item Bend at waist, sternum directly over front knee, put hands on
     blocks (at highest setting), keeping back concave.
   \item Now walk blocks forward, extending back.
   \item Finally, bring head down over knee. 
   \end{itemize}
-\item \praspad{} \PC{2}{13}
-\item \dand{} \PC{2}{14}
-\item \urdhastdand{} \PC{2}{15}
-\item \padadand{} \PC{2}{16}
-\item \newpose{\ardhal} to chair (P.51) \PC{2}{17}
+
+\pose{ \praspad{} \PC{2}{13}}
+
+\pose{ \dand{} \PC{2}{14}}
+
+\pose{ \urdhastdand{} \PC{2}{15}}
+
+\pose{ \padadand{} \PC{2}{16}}
+
+\pose{ \newpose{\ardhal} to chair (P.51) \PC{2}{17}}
   \begin{itemize}
   \item Get 4 blankets, a block, and a chair
   \item 3 blankets - set up as for Sarvangasana. 
@@ -426,28 +483,28 @@ Trikonasana) on opposite side (left foot to the wall).
     in. Hands on mid-to-upper back. Use hands to lift hips and
     straighten back.
   \end{itemize}
-\item \paschi{} \PC{2}{18}
-\item \sav{} \PC{2}{19}
+
+\pose{ \paschi{} \PC{2}{18}}
+
+\pose{ \sav{} \PC{2}{19}}
   
-\end{poselist}
 
-
-\chapter{Week 3}
-\label{chap:week3}
-
-\setcounter{week}{3}
+\week{3}
+\label{week:3}
 
 \textbf{Themes}: 
 
 \textbf{Reading}: 
 
 \section{Sequence for Week 3}
-\label{chap:seq3}
+\label{seq:3}
 
-\begin{poselist}
-\item \tad{} \PC{3}{1}
-\item \urdbad{} \PC{3}{2}
-\item \newpose{vrk{}} \PC{3}{3}
+\pose{ \tad{} \PC{3}{1}}
+
+\pose{ \urdbad{} \PC{3}{2}}
+
+\pose{ \newpose{vrk{}} \PC{3}{3}}
+
   \begin{itemize}
   \item Stand with back to wall, far enough away so that can reach
     back to touch wall for balance.
@@ -465,10 +522,15 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Can you bring your hands together into Urdhva Namaskarasana?
   \item Lower arms, lower right leg, repeat with left leg.
   \end{itemize}
-\item \utttrik{} \PC{3}{4}
-\item \viraii{} \PC{3}{5}
-\item \uttparsva{} \PC{3}{6}
-\item \newpose{\virai} (turning the trunk) \PC{3}{7}
+
+\pose{ \utttrik{} \PC{3}{4}}
+
+\pose{ \viraii{} \PC{3}{5}}
+
+\pose{ \uttparsva{} \PC{3}{6}}
+
+\pose{ \newpose{\virai} (turning the trunk) \PC{3}{7}}
+
   \begin{itemize}
   \item Stand left foot to wall. Turn front foot 90\textdegree out,
     back foot in 60\textdegree. 
@@ -478,7 +540,9 @@ Trikonasana) on opposite side (left foot to the wall).
     help turn the pelvis. 
   \item Repeat on other side.
   \end{itemize}
-\item \newpose{\utka{}} (arms first) \PC{3}{8}
+
+\pose{ \newpose{\utka{}} (arms first) \PC{3}{8}}
+
   \begin{itemize}
   \item Arms up straight in \urdnam{}.
   \item Try to keep elbows straight and bring palms as close together
@@ -486,21 +550,28 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Bend the knees until thighs are parallel to floor. Keep heels
     down. 
   \end{itemize}
-\item \parsvo{} \PC{3}{9}
+
+\pose{ \parsvo{} \PC{3}{9}}
   \begin{itemize}
   \item Start with concave stage (use blocks if necessary) 
   \item Then head down
   \end{itemize}
-\item \newpose{\badhastutt{}} \PC{3}{10}
+
+\pose{ \newpose{\badhastutt{}} \PC{3}{10}}
+
   \begin{itemize}
   \item Start in \tad{}, feet apart.
   \item \badhasttad{}
   \item Exhale, stretch the trunk up, then forward, then down. 
   \item Come up, change the crossing of the arms, and repeat.
   \end{itemize}
-\item \ardhal{}, to chair \PC{3}{11}
-\item \paschi{} \PC{3}{12}
-\item \newpose{setubandsarv{}} (cross bolsters) \PC{3}{13}
+
+\pose{ \ardhal{}, to chair \PC{3}{11}}
+
+\pose{ \paschi{} \PC{3}{12}}
+
+\pose{ \newpose{setubandsarv{}} (cross bolsters) \PC{3}{13}}
+
   \begin{itemize}
   \item Get two bolsters - a round and a flat.
   \item Put the round perpendicular across your mat
@@ -511,29 +582,32 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Stretch legs straight, heels resting on floor.
   \item Arms out to the side.
   \end{itemize}
-\item \sav{}  \PC{3}{14}
-\end{poselist}
+
+\pose{ \sav{}  \PC{3}{14}}
 
 
-\chapter{Week 4}
-\label{chap:week4}
-
-\setcounter{week}{4}
+\week{4}
+\label{week:4}
 
 \textbf{Themes}: 
 
 \textbf{Reading}: 
 
 \section{Sequence for Week 4}
-\label{chap:seq4}
+\label{seq:4}
 
-\begin{poselist}
-\item \tad{} \PC{4}{1}
-\item \urdbad{} \PC{4}{2}
-\item \utttrik{} \PC{4}{3}
-\item \viraii{} \PC{4}{4}
-\item \uttparsva{} \PC{4}{5}
-\item \newpose{\vim{}} \PC{4}{6}
+\pose{ \tad{} \PC{4}{1}}
+
+\pose{ \urdbad{} \PC{4}{2}}
+
+\pose{ \utttrik{} \PC{4}{3}}
+
+\pose{ \viraii{} \PC{4}{4}}
+
+\pose{ \uttparsva{} \PC{4}{5}}
+
+\pose{ \newpose{\vim{}} \PC{4}{6}}
+
   \begin{itemize}
   \item Left foot to wall
   \item Turn front foot 90\textdegree out, back foot 60\textdegree.
@@ -544,7 +618,9 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Straighten front leg, turn feet parallel, 
   \item Repeat on other side.
   \end{itemize}
-\item \newpose{\virai{}} \PC{4}{7}
+
+\pose{ \newpose{\virai{}} \PC{4}{7}}
+
   \begin{itemize}
   \item Start with \vim{}
   \item Arms into \urdhast{}
@@ -552,9 +628,13 @@ Trikonasana) on opposite side (left foot to the wall).
     then \vim{} arms, versus starting with \utthastpad{} hands before
     bending leg.
   \end{itemize}
-\item \utka{}  \PC{4}{8}
-\item \parsvo{} \PC{4}{9}
-\item \newpose{\utt} (full pose) \PC{4}{10}
+
+\pose{ \utka{}  \PC{4}{8}}
+
+\pose{ \parsvo{} \PC{4}{9}}
+
+\pose{ \newpose{\utt} (full pose) \PC{4}{10}}
+
   \begin{itemize}
   \item Get two blocks in case needed
   \item Feet apart
@@ -565,42 +645,52 @@ Trikonasana) on opposite side (left foot to the wall).
     hands to floor or blocks.
   \item Bend at hips, keeping back extended. 
   \end{itemize}
-\item \ardhal{} (from chair) \PC{4}{11}
-\item \newpose{\ekapadsarv{}} (from \ardhal{} on chair) \PC{4}{12}
+
+\pose{ \ardhal{} (from chair) \PC{4}{11}}
+
+\pose{ \newpose{\ekapadsarv{}} (from \ardhal{} on chair) \PC{4}{12}}
+
   \begin{itemize}
   \item From \ardhal{}, left right leg straight towards ceiling.
   \item Keep back straight.
   \item Bring right leg down, repeat with left leg.
   \end{itemize}
-\item \paschi{} \PC{4}{13}
-\item \setubandsarv{} \PC{4}{14}
-\item \sav{} \PC{4}{15}
-\end{poselist}
+
+\pose{ \paschi{} \PC{4}{13}}
+
+\pose{ \setubandsarv{} \PC{4}{14}}
+
+\pose{ \sav{} \PC{4}{15}}
 
 
-\chapter{Week 5}
-\label{chap:week5}
-
-\setcounter{week}{5}
+\week{5}
+\label{week:5}
 
 \textbf{Themes}: Consolidation, \ams{}!, \sarv{}!
 
 \textbf{Reading}: 
 
 \section{Sequence for Week 5}
-\label{chap:seq5}
+\label{seq:5}
 
-\begin{poselist}
-\item \tad{} \PC{5}{1}
-\item \urdhast{} \PC{5}{2}
-\item \urdbad{}  \PC{5}{3}
-\item \nam{}  \PC{5}{4}
-\item \urdnam{} from \urdhast{}  \PC{5}{5}
-\item \newpose{\paschbadhast{}}  \PC{5}{6}
+\pose{ \tad{} \PC{5}{1}}
+
+\pose{ \urdhast{} \PC{5}{2}}
+
+\pose{ \urdbad{}  \PC{5}{3}}
+
+\pose{ \nam{}  \PC{5}{4}}
+
+\pose{ \urdnam{} from \urdhast{}  \PC{5}{5}}
+
+\pose{ \newpose{\paschbadhast{}}  \PC{5}{6}}
+
   \begin{itemize}
   \item Hands behind back, hold elbows.
   \end{itemize}
-\item \newpose{\gomu{}} (arms only) \PC{5}{7}
+
+\pose{ \newpose{\gomu{}} (arms only) \PC{5}{7}}
+
   \begin{itemize}
   \item Get a belt, drape over right shoulder.
   \item Stand in \tad{}
@@ -612,23 +702,37 @@ Trikonasana) on opposite side (left foot to the wall).
     hand. See if can walk hands towards each other along belt.
   \item Head up, abdomen in.
   \end{itemize}
-\item \newpose{\paschnama{}}  \PC{5}{8}
+
+\pose{ \newpose{\paschnama{}}  \PC{5}{8}}
+
   \begin{itemize}
   \item Move shoulder blades towards each other and into back.
   \item Scooch hands up back.
   \item Can you rotate hands and arms so that thumbs come together?
   \end{itemize}
-\item \vrk{} \PC{5}{9}
-\item \utka{} \PC{5}{10}
-\item \utthastpad{} \PC{5}{11}
-\item \uttparsva{}  \PC{5}{12}
-\item \utttrik{}  \PC{5}{13}
-\item \viraii{} \PC{5}{14}
-\item \uttparsva{}  \PC{5}{15}
-\item \vim{}  \PC{5}{16}
-\item \virai{} \PC{5}{17}
-\item \newpose{\praspad{}} (full pose)  \PC{5}{18}
-\item \newpose{\ams{}}  \PC{5}{19}
+
+\pose{ \vrk{} \PC{5}{9}}
+
+\pose{ \utka{} \PC{5}{10}}
+
+\pose{ \utthastpad{} \PC{5}{11}}
+
+\pose{ \uttparsva{}  \PC{5}{12}}
+
+\pose{ \utttrik{}  \PC{5}{13}}
+
+\pose{ \viraii{} \PC{5}{14}}
+
+\pose{ \uttparsva{}  \PC{5}{15}}
+
+\pose{ \vim{}  \PC{5}{16}}
+
+\pose{ \virai{} \PC{5}{17}}
+
+\pose{ \newpose{\praspad{}} (full pose)  \PC{5}{18}}
+
+\pose{ \newpose{\ams{}}  \PC{5}{19}}
+
   \begin{itemize}
   \item Mat to wall, stand against wall. 
   \item \utt{}, hands to floor. Walk hands forward 4 feet, keeping
@@ -644,7 +748,9 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Now keep buttocks up high while lengthening calves and ankle
     to bring heels down towards floor.
   \end{itemize}
-\item \newpose{\utt{}} (concave back)  \PC{5}{20}
+
+\pose{ \newpose{\utt{}} (concave back)  \PC{5}{20}}
+
   \begin{itemize}
   \item Get 2 blocks
   \item Feet hip width apart.
@@ -653,18 +759,25 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Weight even on feet front to back.
   \item repeat with feet together.
   \end{itemize}
-\item \newpose{\padang{}}  \PC{5}{21}
+
+\pose{ \newpose{\padang{}}  \PC{5}{21}}
+
   \begin{itemize}
   \item Use belt if cannot grab toes.
   \item Start with concave back. Head looking up/forward.
   \item Then release into head down.
   \end{itemize}
-\item \ardhal{} (with chair)  \PC{5}{22}
+
+\pose{ \ardhal{} (with chair)  \PC{5}{22}}
+
   \begin{itemize}
   \item Teach use of belt, as preparation for \sarv{}.
   \end{itemize}
-\item \newpose{\ekapadsarv{}} (from \ardhal{})  \PC{5}{23}
-\item \newpose{\sarv{}} (from \ardhal{})  \PC{5}{24}
+
+\pose{ \newpose{\ekapadsarv{}} (from \ardhal{})  \PC{5}{23}}
+
+\pose{ \newpose{\sarv{}} (from \ardhal{})  \PC{5}{24}}
+
   \begin{itemize}
   \item Staying in \ardhal{},
   \item Bring right foot up into \ekapadsarv{}.
@@ -672,50 +785,65 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Straighten back using hands.
   \item Bring hands higher on back (towards neck).
   \end{itemize}
-\item \newpose{\hal{}}  \PC{5}{25}
+
+\pose{ \newpose{\hal{}}  \PC{5}{25}}
+
   \begin{itemize}
   \item Bring legs down to chair, into \ardhal{}.
   \item Push chair away from head,
   \item Bring legs down, bringing feet to floor.
   \item Hips should be over head.
   \end{itemize}
-\item \paschi{}  \PC{5}{27}
+
+\pose{ \paschi{}  \PC{5}{27}}
+
   \begin{itemize}
   \item (skipping \karn{})
   \end{itemize}
-\item \sav{}  \PC{5}{18}
-\end{poselist}
+
+\pose{ \sav{}  \PC{5}{18}}
 
 
-
-\chapter{Week 6}
-\label{chap:week6}
-
-\setcounter{week}{6}
+\week{6}
+\label{week:6}
 
 \textbf{Themes}: \ardchand{}!
 
 \textbf{Reading}: 
 
 \section{Sequence for Week 6}
-\label{chap:seq6}
+\label{seq:6}
 
-\begin{poselist}
-\item \tad{} \PC{6}{1}
-\item \urdbad{}  \PC{6}{2}
-\item \paschbadhast{}  \PC{6}{3}
-\item \gomu{}  \PC{6}{4}
-\item \paschbadhast{}  \PC{6}{5}
-\item \vrk{}  \PC{6}{6}
-\item \utka{}  \PC{6}{7}
-\item \utthastpad  \PC{6}{8}
-\item \parshastpad{}  \PC{6}{9}
-\item \utttrik{}  \PC{6}{10}
-\item \viraii  \PC{6}{11}
-\item \uttparsva  \PC{6}{12}
-\item \vim  \PC{6}{13}
-\item \virai \PC{6}{14}
-\item \newpose{\ardchand{}}  \PC{6}{15}
+\pose{ \tad{} \PC{6}{1}}
+
+\pose{ \urdbad{}  \PC{6}{2}}
+
+\pose{ \paschbadhast{}  \PC{6}{3}}
+
+\pose{ \gomu{}  \PC{6}{4}}
+
+\pose{ \paschbadhast{}  \PC{6}{5}}
+
+\pose{ \vrk{}  \PC{6}{6}}
+
+\pose{ \utka{}  \PC{6}{7}}
+
+\pose{ \utthastpad  \PC{6}{8}}
+
+\pose{ \parshastpad{}  \PC{6}{9}}
+
+\pose{ \utttrik{}  \PC{6}{10}}
+
+\pose{ \viraii  \PC{6}{11}}
+
+\pose{ \uttparsva  \PC{6}{12}}
+
+\pose{ \vim  \PC{6}{13}}
+
+\pose{ \virai \PC{6}{14}}
+
+\pose{ \newpose{\ardchand{}}  \PC{6}{15}}
+
   \begin{itemize}
   \item Have a block available.
   \item \utttrik{}
@@ -730,24 +858,35 @@ Trikonasana) on opposite side (left foot to the wall).
   \item Can you raise your left arm towards ceiling?
   \item Repeat on other side.
   \end{itemize}
-\item \newpose{\parsvo{}} (full pose) \PC{6}{16}
-\item \ams{}  \PC{6}{17}
-\item \utt{} (concave back)  \PC{6}{18,19}
+
+\pose{ \newpose{\parsvo{}} (full pose) \PC{6}{16}}
+
+\pose{ \ams{}  \PC{6}{17}}
+
+\pose{ \utt{} (concave back)  \PC{6}{18,19}}
+
   \begin{itemize}
   \item Use blocks if neede
   \item First with feet apart, then repeat with feet together.
   \end{itemize}
-\item \padang{}  \PC{6}{20}
-\item \ardhal{}  \PC{6}{21}
-\item \ekapadsarv{}  \PC{6}{22}
-\item \sarv{}  \PC{6}{23}
-\item \hal{}  \PC{6}{24}
-\item \paschi{}  \PC{6}{26}
+
+\pose{ \padang{}  \PC{6}{20}}
+
+\pose{ \ardhal{}  \PC{6}{21}}
+
+\pose{ \ekapadsarv{}  \PC{6}{22}}
+
+\pose{ \sarv{}  \PC{6}{23}}
+
+\pose{ \hal{}  \PC{6}{24}}
+
+\pose{ \paschi{}  \PC{6}{26}}
+
   \begin{itemize}
   \item skipping \karn{}
   \end{itemize}
-\item \sav  \PC{6}{27}
-\end{poselist}
+
+\pose{ \sav  \PC{6}{27}}
 
 
 \bibliography{yoga}
