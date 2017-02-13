@@ -1,0 +1,757 @@
+\documentclass{book}
+
+\usepackage{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{textcomp}   % for degree symbol
+\usepackage{wrapfig}
+\usepackage[dvipsnames]{xcolor}
+
+
+% Pose shortcodes
+\newcommand{\pose}[1]{\emph{#1}}
+%
+\newcommand{\ams}{\pose{Adho Mukha Svanasana}}
+\newcommand{\ardhal}{\pose{Ardha Halasana}}
+\newcommand{\ardchand}{\pose{Ardha Chandrasana}}
+\newcommand{\badd}{\pose{Baddhanguliyasana}}
+\newcommand{\badhasttad}{\pose{Baddha Hasta Tadasana}}
+\newcommand{\badhastutt}{\pose{Baddha Hasta Uttanasana}}
+\newcommand{\dand}{\pose{Dandasana}}
+\newcommand{\ekapadsarv}{\pose{Eka Pada Sarvangasana}}
+\newcommand{\gomu}{\pose{Gomukasana}}
+\newcommand{\hal}{\pose{Halasana}}
+\newcommand{\karn}{\pose{Karnapidasana}}
+\newcommand{\nam}{\pose{Namaskarasana}}
+\newcommand{\padadand}{\pose{Padanghusta Dandasana}}
+\newcommand{\padang}{\pose{Padangusthasana}}
+\newcommand{\parshastpad}{Parsva Hasta Padasana}
+\newcommand{\parsvo}{\pose{Parsvottanasana}}
+\newcommand{\paschi}{\pose{Paschimottanasana}}
+\newcommand{\paschbadhast}{\pose{Paschima Baddha Hastasana}}
+\newcommand{\paschnama}{\pose{Paschima Namaskarasana}}
+\newcommand{\praspad}{\pose{Prasarita Padottanasana}}
+\newcommand{\sarv}{\pose{Salamba Sarvangasana}}
+\newcommand{\sav}{\pose{Savasana}}
+\newcommand{\setubandsarv}{\pose{Setu Bandha Sarvangasana}}
+\newcommand{\tad}{\pose{Tadasana}}
+\newcommand{\urdbad}{\pose{Urdhva Baddhanguliyasana}}
+\newcommand{\urdhast}{\pose{Urdhva Hastasana}}
+\newcommand{\urdhastdand}{\pose{Urdhva Hasta Dandasana}}
+\newcommand{\urdnam}{\pose{Urdhva Namaskarasana}}
+\newcommand{\utka}{\pose{Utkatasana}}
+\newcommand{\utt}{\pose{Uttanasana}}
+\newcommand{\utthastpad}{\pose{Utthita Hasta Padasana}}
+\newcommand{\uttparsva}{\pose{Utthita Parsvakonasana}}
+\newcommand{\utttrik}{\pose{Utthita Trikonasana}}
+\newcommand{\vim}{\pose{Vimanasana}}
+\newcommand{\virai}{\pose{Virabhdrasana I}}
+\newcommand{\viraii}{\pose{Virabhadrasana II}}
+\newcommand{\vrk}{\pose{Vrksasana}}
+
+\newcommand{\poseFig}[1]{
+  \begin{wrapfigure}{r}{2.1in}
+      \begin{center}
+        \includegraphics[width=2.0in]{Figures/{"#1"}.jpg}
+      \end{center}
+    \end{wrapfigure}
+}
+
+\newcommand{\amsFig}{\poseFig{Adho Mukha Svanasana}}
+\newcommand{\ardhalFig}{\poseFig{Ardha Halasana}}
+\newcommand{\ardchandFig}{\poseFig{Ardha Chandrasana}}
+\newcommand{\baddFig}{\poseFig{Baddhanguliyasana}}
+\newcommand{\badhasttadFig}{\poseFig{Baddha Hasta Tadasana}}
+\newcommand{\badhastuttFig}{\poseFig{Baddha Hasta Uttanasana}}
+\newcommand{\dandFig}{\poseFig{Dandasana}}
+\newcommand{\ekapadsarvFig}{\poseFig{Eka Pada Sarvangasana}}
+\newcommand{\gomuFig}{\poseFig{Gomukasana}}
+\newcommand{\halFig}{\poseFig{Halasana}}
+\newcommand{\karnFig}{\poseFig{Karnapidasana}}
+\newcommand{\namFig}{\poseFig{Namaskarasana}}
+\newcommand{\padadandFig}{\poseFig{Padanghusta Dandasana}}
+\newcommand{\padangFig}{\poseFig{Padangusthasana}}
+\newcommand{\parshastpadFig}{Parsva Hasta Padasana}
+\newcommand{\parsvoFig}{\poseFig{Parsvottanasana}}
+\newcommand{\paschiFig}{\poseFig{Paschimottanasana}}
+\newcommand{\paschbadhastFig}{\poseFig{Paschima Baddha Hastasana}}
+\newcommand{\paschnamaFig}{\poseFig{Paschima Namaskarasana}}
+\newcommand{\praspadFig}{\poseFig{Prasarita Padottanasana}}
+\newcommand{\sarvFig}{\poseFig{Salamba Sarvangasana}}
+\newcommand{\savFig}{\poseFig{Savasana}}
+\newcommand{\setubandsarvFig}{\poseFig{Setu Bandha Sarvangasana}}
+\newcommand{\tadFig}{\poseFig{Tadasana}}
+\newcommand{\urdbadFig}{\poseFig{Urdhva Baddhanguliyasana}}
+\newcommand{\urdhastFig}{\poseFig{Urdhva Hastasana}}
+\newcommand{\urdhastdandFig}{\poseFig{Urdhva Hasta Dandasana}}
+\newcommand{\urdnamFig}{\poseFig{Urdhva Namaskarasana}}
+\newcommand{\utkaFig}{\poseFig{Utkatasana}}
+\newcommand{\uttFig}{\poseFig{Uttanasana}}
+\newcommand{\utthastpadFig}{\poseFig{Utthita Hasta Padasana}}
+\newcommand{\uttparsvaFig}{\poseFig{Utthita Parsvakonasana}}
+\newcommand{\utttrikFig}{\poseFig{Utthita Trikonasana}}
+\newcommand{\vimFig}{\poseFig{Vimanasana}}
+\newcommand{\viraiFig}{\poseFig{Virabhdrasana I}}
+\newcommand{\viraiiFig}{\poseFig{Virabhadrasana II}}
+\newcommand{\vrkFig}{\poseFig{Vrksasana}}
+
+
+
+% \PC{week}{pose #}
+\newcommand{\PC}[2]{\hfill(Week #1, Pose #2 in PC)}
+
+% \term{xxx} - introduce a standard Iyengar word or phrase
+\newcommand{\term}[1]{``{#1}''}
+
+% \newpose{xxx} - first time this pose has been used in course
+\newcommand{\newpose}[1]{{\color{Blue}{#1}}}
+
+\newcounter{week}
+
+% list of poses for a week
+\newlist{poselist}{enumerate}{1}
+\setlist[poselist]{label=w\arabic{week}.\arabic*}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex}
+
+
+\title{Six Week Iyengar Yoga Course for Beginners}
+\author{Greg Sullivan \href{mailto:gregs@sulliwood.org}{gregs@sulliwood.org} \\
+For Heart of Iyengar Yoga Teacher Training course with Peentz Dubble
+}
+\date{March 11, 2017}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter*{Overview / Goals}
+\label{chap:overview}
+
+\addcontentsline{toc}{chapter}{Overview/Goals}
+
+The overriding goal of a class for beginning students is to instill an
+enjoyment and appreciation of yoga practice. The goal is to give
+beginning students a taste for the benefits of yoga practice, and to,
+as much as possible, give these beginning students tools that they can
+use to safely and joyfully continue to practice yoga. As Geeta Iyengar
+writes in the preface of ``Yoga in Action: A Preliminary
+Course''\cite{GeetaPC}, 
+
+\begin{quote}
+  \emph{Yoga in Action for Beginners is not the end, but the beginning of
+  yoga. It is for the practitioner to ignite the hidden force of yoga
+  from within, so that it throws the Light on the path of the yogic
+  journey.}
+\end{quote}
+
+Of course, Preliminary Course gives a 28-week syllabus, and for this
+assignment we are creating only a 6-week course.
+
+The immediate goals of the first few classes is to help students
+familiarize themselves with their bodies, and also with the
+terminology we use to describe motions and poses in Iyengar Yoga
+classes.
+
+Yoga, and in particular asana practice, is not about how you look. If
+your pose is not geometrically perfect, you are not a failure. One of
+the lessons that yoga teaches is vairagya, detachment. Along with
+detachment is non-judgement. Judging yourself, in an asana, as ``good''
+or ``bad'' is not helpful. The question is ``what is the goal?'' How do
+you strive towards the goal? In this way, asana practice is a
+microcosm of ``life practice''. The concept of ``bringing yoga off the
+mat'' is important
+
+
+I have mostly followed the sequences given for the first six weeks in
+Geeta Iyengar's \emph{Preliminary Course}\cite{GeetaPC}, abbreviated
+``PC''. For each pose given, I indicate whether it was in that week's
+sequence in PC, and, if so, which number in the sequence in PC.
+For example, if the fourth pose in week 2 is \nam{}, and it is also
+the fourth pose in the week 2 syllabus in PC, I will write:
+
+w2.4 \nam{} \PC{2}{4}
+
+\section*{Formatting Notes}
+\label{chap:formatting}
+
+\addcontentsline{toc}{section}{Formatting Notes}
+
+Pose names are italicized, as in \pose{this is a pose name}.
+
+A new pose (not introduced earlier) will be both italicized and
+colored blue, as in \newpose{\pose{this is a new pose}}.
+
+Images of poses are taken from \emph{Preliminary Course}, as I do not
+yet have images of myself in the poses.
+
+\chapter{Week 1}
+\label{chap:week1}
+
+\setcounter{week}{1}
+
+\textbf{Themes}: What is yoga? Your body in space.
+
+\textbf{Reading}: Something that relates asana to the rest of one's
+life; how looking for alignment and balance in asana can be brought
+``off the mat'' to bring alignment and balance in the rest of one's
+life.
+
+\section{Sequence for Week 1}
+\label{chap:seq1}
+
+\begin{poselist}
+\item \newpose{\sav{}} \hfill(not given as first pose in PC)
+  \amsFig
+  \begin{itemize}
+  \item Have several blankets available if needed.
+  \item Lie flat; legs together, toes pointing towards ceiling. Knees
+    pointing to ceiling. Hips level. Feel what parts of your body are
+    touching the ground. Is there equal weight on both heels? Both
+    buttocks? Shoulder blades?
+  \item Now bring your arms over your head. Can you reach all the way
+    to the ground? Use blankets if need support. How close are hands;
+    can you bring them closer together? Rotate your arms so that your
+    palms face the ceiling. Now reverse the rotation; which causes the
+    shoulder blades to separate? Try rolling the upper arms (nearer
+    the shoulders) \term{inward} so that palms turn toward floor. Now keep
+    upper arms turned in, but make palms parallel.
+  \item Now try to increase the distance between top of shoulders and
+    ears (i.e. lower shoulders) while keeping arms straight above
+    head.
+  \end{itemize}
+\item \newpose{\tad{}}, against a wall \PC{1}{1}
+  \begin{itemize}
+  \item Now we are going to attempt to replicate the pose we just did
+    on the floor, with the help of gravity, while standing.
+  \item In \sav{}, the floor was a useful reference point -- we
+    could tell if our hips were even, or our shoulder blades were
+    even, by feeling the contact with the floor.
+  \item Stand with your back lightly touching the wall; your heels as
+    close to the wall as possible.
+  \item Have your feet together.
+  \item Is your weight balanced on your feet, left vs. right? Try
+    shifting all your weight to your left foot; now the right foot.
+  \item Is your weight evenly balanced forward and backward? That is,
+    is the weight on the balls of your feet the same as the weight on
+    your heels? Try moving forward, putting more weight on the balls
+    of the feet. Now try lifting the toes, putting all the weight on
+    the heels. Now back to even.
+  \item Consider your left foot. Is the weight evenly balanced on the
+    ``4 corners'' of the foot? Same for right foot.
+  \item Remember what was touching the floor in Savasana? Lightly
+    touching the wall, see if you can replicate the touchpoints from
+    Savasana. Your heels, buttocks', shoulder blades, and back of
+    head.
+  \end{itemize}
+\item \newpose{\urdhast{}} \PC{1}{2}
+  \begin{itemize}
+  \item Now raise your arms above your head. This is called \urdhast{}
+    (arms). Recall where they were when you were on your back; can you
+    position them the same way without gravity? Turn your arms
+    ``inward'' again, so that palms turn towards wall. Now keep upper
+    arms turned, but make palms parallel.
+  \item Lower shoulders away from ears.
+  \end{itemize}
+
+\item \newpose{\urdbad{}} \PC{1}{3}
+  \begin{itemize}
+  \item Bring your arms down to pointing straight in front of you.
+  \item Clasp your hands. Note which thumb is on top. 
+  \item Separate your wrists and rotate the thumb sides down. This is
+    \badd{}.
+  \item Raise your arms, keeping your hands in \badd{}; Straighten
+    your arms, especially the elbows.
+  \item Lower your arms, change the interlock of your fingers so that
+    other thumb is on top, repeat.
+  \end{itemize}
+
+\item	\newpose{\nam{}} \PC{1}{4}
+\item	\newpose{\urdnam{}} from \urdhast{} \PC{1}{5}
+\end{poselist}
+
+\textbf{Interlude}. So far everything has been perfectly straight and
+balanced, left to right, top to bottom. Now we're going to branch out.
+
+\begin{poselist}[resume]
+\item \newpose{Half \utt} (made up - not in PC)
+  \begin{itemize}
+  \item Bring mats to wall.
+  \item Stand legs-distance from wall. Lean over so that torso is
+    parallel to floor, forming right angle; hands touching wall. Above
+    waist is Urdhva Hastasana (rotated 90\textdegree). Below waist is \tad.
+  \end{itemize}
+\item \newpose{\utthastpad} \PC{1}{6}
+  \begin{itemize}
+  \item Left foot to wall.
+  \item Separate feet 4-5 feet apart. Arms out, parallel to
+    floor. Even balance front-to-back, left to right.
+  \item Lift trunk and chest. Lower shoulders
+  \end{itemize}
+\item \newpose{\parshastpad} \PC{1}{7}
+  \begin{itemize}
+  \item Turn right leg out 90\textdegree. Right heel in line with
+    center of left foot (both feet centered on mat). Toes pointing
+    90\textdegree, left knee pointing 90\textdegree. Turn left foot in
+    slightly. Everything else unchanged. Hips still parallel to long
+    edge of mat; torso facing forward; face facing forward. Are hips
+    even (same height)?
+  \end{itemize}
+\item \newpose{\utttrik} \PC{1}{8}
+  \begin{itemize}
+  \item Extend the right arm out as you bend at the waist and bring
+    the right arm down to the shin. Place your left arm on your left
+    waist. Keep your torso perpendicular to the ground, requiring
+    rotation right-to-left of the torso. Now bring left arm up,
+    pointing to ceiling; two arms going in opposite directions. Lower
+    shoulders (increase distance between ears and shoulders). Are hips
+    perpendicular to the wall?
+  \item Come up, turn feet parallel.
+  \item Optional variation: Can try parallel to wall, so that wall
+    gives feedback to buttocks, shoulder blades, and head about
+    alignment.
+  \end{itemize}
+\end{poselist}
+
+(repeat Utthita Hasta Padasana, Parsva Hasta Padasana, Utthita
+Trikonasana) on opposite side (left foot to the wall).
+
+\begin{poselist}[resume]
+\item \newpose{\parsvo} (concave back) \PC{1}{9}
+  \begin{itemize}
+  \item Grab two blocks.
+  \item Left foot to wall, Parsva Hasta Padasana. Now turn back foot
+    in more, and rotate hips to parallel wall. Hands to hips. Balance
+    pelvis - front-to-back and side-to-side. Chest facing front of
+    mat, head facing straight ahead.
+  \item Extend back, make concave, look up.
+  \item Now bend so that torso is parallel to floor (recall
+    half-uttanasana).
+  \item Put blocks at whatever height allows you to keep concave back.
+  \item Repeat with right foot to wall.
+  \end{itemize}
+\item \newpose{\praspad} (concave back) \PC{1}{10}
+  \begin{itemize}
+  \item Wide separation of feet. Feet parallel to each other; even
+    w.r.t. distance from edge of mat.
+  \item Bend at waist so that torso is parallel to floor. Back
+    concave. Hands directly below shoulders on floor. Use blocks if
+    needed to get torso parallel to floor.
+  \item Hips over (in line with) feet. Weight even front-to-back on
+    feet. Feet flat, weight even inner-to-outer on feet.
+  \end{itemize}
+\item \newpose{\dand}  \PC{1}{11}
+\item \newpose{\urdhastdand} \PC{1}{12}
+\item \newpose{\padadand} \PC{1}{13}
+  \begin{itemize}
+  \item Use a belt for integrity of back.
+  \item Concave back
+  \end{itemize}
+\item \newpose{\paschi} \PC{1}{14}
+  \begin{itemize}
+  \item This is a good time to remind students to not be attached to
+    the perfect form/geometry of the asana, but to consider the goals.
+  \end{itemize}
+\item \sav
+\end{poselist}
+
+
+\chapter{Week 2}
+\label{chap:week2}
+
+\setcounter{week}{2}
+
+\textbf{Themes}: 
+
+\textbf{Reading}:
+
+
+\section{Sequence for Week 2}
+\label{chap:seq2}
+
+\begin{poselist}
+\item \tad{} \PC{2}{1}
+\item \urdhast{} \PC{2}{2}
+\item \urdbad{} \PC{2}{3}
+\item \nam{} \PC{2}{4}
+\item \urdnam{} \PC{2}{5}
+\item \utthastpad{} \PC{2}{6}
+\item \parshastpad{} \PC{2}{7}
+\item \utttrik{} \PC{2}{8}
+\item \newpose{\viraii} \PC{2}{9}
+  \begin{itemize}
+  \item Start in \parshastpad{} - as in start of \utttrik{}.
+  \item (do pose with hands on waist first, then with arms extended)
+  \item Keeping everything stable, bend right knee to 90\textdegree
+  \item Extend inner thigh; pull back outer thigh.
+  \item Look over front arm.
+  \item Repeat on other side
+  \end{itemize}
+\item \newpose{\uttparsva} \PC{2}{10}
+  \begin{itemize}
+  \item Again, start in \parshastpad{}
+  \item Again, bend right knee to 90\textdegree
+  \item Left hand on waist.
+  \item Bring right hand to floor, or block, keeping chest facing wall
+    in front of you (perpendicular to floor).
+  \item Rotate abdomen.
+  \item Raise left arm towards ceiling.
+  \item Rotate left arm as in \utthastpad{}
+  \item See if you can bring arm down alongside ear.
+  \end{itemize}
+\item \parsvo{} (standing, then concave back) \PC{2}{11}
+\item \newpose{\parsvo{}} \PC{2}{12}
+  \begin{itemize}
+  \item Bend at waist, sternum directly over front knee, put hands on
+    blocks (at highest setting), keeping back concave.
+  \item Now walk blocks forward, extending back.
+  \item Finally, bring head down over knee. 
+  \end{itemize}
+\item \praspad{} \PC{2}{13}
+\item \dand{} \PC{2}{14}
+\item \urdhastdand{} \PC{2}{15}
+\item \padadand{} \PC{2}{16}
+\item \newpose{\ardhal} to chair (P.51) \PC{2}{17}
+  \begin{itemize}
+  \item Get 4 blankets, a block, and a chair
+  \item 3 blankets - set up as for Sarvangasana. 
+  \item Chair at head, 1 blanket on chair. block for tailbone.
+  \item Shoulders 2 in.s from edge of blankets.
+  \item Swing up.
+  \item Goals: hips over head, legs parallel to floor.
+  \item Arm positions for Sarvangasna (w/o belts). Elbows down and
+    in. Hands on mid-to-upper back. Use hands to lift hips and
+    straighten back.
+  \end{itemize}
+\item \paschi{} \PC{2}{18}
+\item \sav{} \PC{2}{19}
+  
+\end{poselist}
+
+
+\chapter{Week 3}
+\label{chap:week3}
+
+\setcounter{week}{3}
+
+\textbf{Themes}: 
+
+\textbf{Reading}: 
+
+\section{Sequence for Week 3}
+\label{chap:seq3}
+
+\begin{poselist}
+\item \tad{} \PC{3}{1}
+\item \urdbad{} \PC{3}{2}
+\item \newpose{vrk{}} \PC{3}{3}
+  \begin{itemize}
+  \item Stand with back to wall, far enough away so that can reach
+    back to touch wall for balance.
+  \item Bend the right knee, keeping left leg in Tadasana, grab right
+    foot with right hand.
+  \item Place right foot high on inside of left thigh.
+  \item Push thigh out against foot, foot in against thigh.
+  \item Push knee back - lengthen inner right thigh, pull in outer
+    right thigh. 
+  \item Can you get your knee parallel with wall (perpendicular to
+    gaze)? 
+  \item Balance free of wall
+  \item Can you raise your left hand straight up?
+  \item Now your right hand?
+  \item Can you bring your hands together into Urdhva Namaskarasana?
+  \item Lower arms, lower right leg, repeat with left leg.
+  \end{itemize}
+\item \utttrik{} \PC{3}{4}
+\item \viraii{} \PC{3}{5}
+\item \uttparsva{} \PC{3}{6}
+\item \newpose{\virai} (turning the trunk) \PC{3}{7}
+  \begin{itemize}
+  \item Stand left foot to wall. Turn front foot 90\textdegree out,
+    back foot in 60\textdegree. 
+  \item Turn the trunk to face away from wall.
+  \item Focus on turning pelvis to face evenly perpendicular to mat. 
+  \item With left hand, grab left thigh and pull/rotate it forward, to
+    help turn the pelvis. 
+  \item Repeat on other side.
+  \end{itemize}
+\item \newpose{\utka{}} (arms first) \PC{3}{8}
+  \begin{itemize}
+  \item Arms up straight in \urdnam{}.
+  \item Try to keep elbows straight and bring palms as close together
+    as possible. 
+  \item Bend the knees until thighs are parallel to floor. Keep heels
+    down. 
+  \end{itemize}
+\item \parsvo{} \PC{3}{9}
+  \begin{itemize}
+  \item Start with concave stage (use blocks if necessary) 
+  \item Then head down
+  \end{itemize}
+\item \newpose{\badhastutt{}} \PC{3}{10}
+  \begin{itemize}
+  \item Start in \tad{}, feet apart.
+  \item \badhasttad{}
+  \item Exhale, stretch the trunk up, then forward, then down. 
+  \item Come up, change the crossing of the arms, and repeat.
+  \end{itemize}
+\item \ardhal{}, to chair \PC{3}{11}
+\item \paschi{} \PC{3}{12}
+\item \newpose{setubandsarv{}} (cross bolsters) \PC{3}{13}
+  \begin{itemize}
+  \item Get two bolsters - a round and a flat.
+  \item Put the round perpendicular across your mat
+  \item Put the flat bolster lengthwise over the round bolster,
+    forming a ``+'' 
+  \item Lie down along top bolster so that head and shoulders come to
+    floor.  
+  \item Stretch legs straight, heels resting on floor.
+  \item Arms out to the side.
+  \end{itemize}
+\item \sav{}  \PC{3}{14}
+\end{poselist}
+
+
+\chapter{Week 4}
+\label{chap:week4}
+
+\setcounter{week}{4}
+
+\textbf{Themes}: 
+
+\textbf{Reading}: 
+
+\section{Sequence for Week 4}
+\label{chap:seq4}
+
+\begin{poselist}
+\item \tad{} \PC{4}{1}
+\item \urdbad{} \PC{4}{2}
+\item \utttrik{} \PC{4}{3}
+\item \viraii{} \PC{4}{4}
+\item \uttparsva{} \PC{4}{5}
+\item \newpose{\vim{}} \PC{4}{6}
+  \begin{itemize}
+  \item Left foot to wall
+  \item Turn front foot 90\textdegree out, back foot 60\textdegree.
+  \item Hands on waist
+  \item Bend front leg to a 90\textdegree angle
+  \item Keep trunk straight, perpendicular to floor.
+  \item Keep back heel down.
+  \item Straighten front leg, turn feet parallel, 
+  \item Repeat on other side.
+  \end{itemize}
+\item \newpose{\virai{}} \PC{4}{7}
+  \begin{itemize}
+  \item Start with \vim{}
+  \item Arms into \urdhast{}
+  \item Experiment with starting with hands on waist, then knee bend,
+    then \vim{} arms, versus starting with \utthastpad{} hands before
+    bending leg.
+  \end{itemize}
+\item \utka{}  \PC{4}{8}
+\item \parsvo{} \PC{4}{9}
+\item \newpose{\utt} (full pose) \PC{4}{10}
+  \begin{itemize}
+  \item Get two blocks in case needed
+  \item Feet apart
+  \item Start with \badhasttad{}
+  \item Then \badhastutt{}
+  \item Finally, extend arms to floor, using blocks if needed. 
+  \item Come up. Feet together, \urdhast{} hands, extend, bend, bring
+    hands to floor or blocks.
+  \item Bend at hips, keeping back extended. 
+  \end{itemize}
+\item \ardhal{} (from chair) \PC{4}{11}
+\item \newpose{\ekapadsarv{}} (from \ardhal{} on chair) \PC{4}{12}
+  \begin{itemize}
+  \item From \ardhal{}, left right leg straight towards ceiling.
+  \item Keep back straight.
+  \item Bring right leg down, repeat with left leg.
+  \end{itemize}
+\item \paschi{} \PC{4}{13}
+\item \setubandsarv{} \PC{4}{14}
+\item \sav{} \PC{4}{15}
+\end{poselist}
+
+
+\chapter{Week 5}
+\label{chap:week5}
+
+\setcounter{week}{5}
+
+\textbf{Themes}: Consolidation, \ams{}!, \sarv{}!
+
+\textbf{Reading}: 
+
+\section{Sequence for Week 5}
+\label{chap:seq5}
+
+\begin{poselist}
+\item \tad{} \PC{5}{1}
+\item \urdhast{} \PC{5}{2}
+\item \urdbad{}  \PC{5}{3}
+\item \nam{}  \PC{5}{4}
+\item \urdnam{} from \urdhast{}  \PC{5}{5}
+\item \newpose{\paschbadhast{}}  \PC{5}{6}
+  \begin{itemize}
+  \item Hands behind back, hold elbows.
+  \end{itemize}
+\item \newpose{\gomu{}} (arms only) \PC{5}{7}
+  \begin{itemize}
+  \item Get a belt, drape over right shoulder.
+  \item Stand in \tad{}
+  \item Upper arm first. Right arm. Bend elbow, hand reaching down
+    back. Use left hand to gently push elbow back. Elbow pointing
+    straight up. Keep head up, facing forward.
+  \item Lower arm. Sweep left arm out and around to back. Bend elbow.  
+  \item Can hands clasp? If not, grab belt with right hand, then left
+    hand. See if can walk hands towards each other along belt.
+  \item Head up, abdomen in.
+  \end{itemize}
+\item \newpose{\paschnama{}}  \PC{5}{8}
+  \begin{itemize}
+  \item Move shoulder blades towards each other and into back.
+  \item Scooch hands up back.
+  \item Can you rotate hands and arms so that thumbs come together?
+  \end{itemize}
+\item \vrk{} \PC{5}{9}
+\item \utka{} \PC{5}{10}
+\item \utthastpad{} \PC{5}{11}
+\item \uttparsva{}  \PC{5}{12}
+\item \utttrik{}  \PC{5}{13}
+\item \viraii{} \PC{5}{14}
+\item \uttparsva{}  \PC{5}{15}
+\item \vim{}  \PC{5}{16}
+\item \virai{} \PC{5}{17}
+\item \newpose{\praspad{}} (full pose)  \PC{5}{18}
+\item \newpose{\ams{}}  \PC{5}{19}
+  \begin{itemize}
+  \item Mat to wall, stand against wall. 
+  \item \utt{}, hands to floor. Walk hands forward 4 feet, keeping
+    heels at the wall.
+  \item Hands shoulder-width apart. Feet in line with hands.
+  \item Hands: weight balanced left hand vs right hand. For each hand,
+    weight balanced evenly front-to-back, pinky-to-thumb. Palms open,
+    fingers spread apart.
+  \item Arms: elbows straight
+  \item Lengthen spine, raise buttocks toward ceiling
+  \item legs straight, knees open
+  \item Come up on toes, left buttocks as high as possible.
+  \item Now keep buttocks up high while lengthening calves and ankle
+    to bring heels down towards floor.
+  \end{itemize}
+\item \newpose{\utt{}} (concave back)  \PC{5}{20}
+  \begin{itemize}
+  \item Get 2 blocks
+  \item Feet hip width apart.
+  \item use blocks if hands cannot rest comfortably on floor.  
+  \item Knees straight
+  \item Weight even on feet front to back.
+  \item repeat with feet together.
+  \end{itemize}
+\item \newpose{\padang{}}  \PC{5}{21}
+  \begin{itemize}
+  \item Use belt if cannot grab toes.
+  \item Start with concave back. Head looking up/forward.
+  \item Then release into head down.
+  \end{itemize}
+\item \ardhal{} (with chair)  \PC{5}{22}
+  \begin{itemize}
+  \item Teach use of belt, as preparation for \sarv{}.
+  \end{itemize}
+\item \newpose{\ekapadsarv{}} (from \ardhal{})  \PC{5}{23}
+\item \newpose{\sarv{}} (from \ardhal{})  \PC{5}{24}
+  \begin{itemize}
+  \item Staying in \ardhal{},
+  \item Bring right foot up into \ekapadsarv{}.
+  \item Bring left foot up to join right foot.
+  \item Straighten back using hands.
+  \item Bring hands higher on back (towards neck).
+  \end{itemize}
+\item \newpose{\hal{}}  \PC{5}{25}
+  \begin{itemize}
+  \item Bring legs down to chair, into \ardhal{}.
+  \item Push chair away from head,
+  \item Bring legs down, bringing feet to floor.
+  \item Hips should be over head.
+  \end{itemize}
+\item \paschi{}  \PC{5}{27}
+  \begin{itemize}
+  \item (skipping \karn{})
+  \end{itemize}
+\item \sav{}  \PC{5}{18}
+\end{poselist}
+
+
+
+\chapter{Week 6}
+\label{chap:week6}
+
+\setcounter{week}{6}
+
+\textbf{Themes}: \ardchand{}!
+
+\textbf{Reading}: 
+
+\section{Sequence for Week 6}
+\label{chap:seq6}
+
+\begin{poselist}
+\item \tad{} \PC{6}{1}
+\item \urdbad{}  \PC{6}{2}
+\item \paschbadhast{}  \PC{6}{3}
+\item \gomu{}  \PC{6}{4}
+\item \paschbadhast{}  \PC{6}{5}
+\item \vrk{}  \PC{6}{6}
+\item \utka{}  \PC{6}{7}
+\item \utthastpad  \PC{6}{8}
+\item \parshastpad{}  \PC{6}{9}
+\item \utttrik{}  \PC{6}{10}
+\item \viraii  \PC{6}{11}
+\item \uttparsva  \PC{6}{12}
+\item \vim  \PC{6}{13}
+\item \virai \PC{6}{14}
+\item \newpose{\ardchand{}}  \PC{6}{15}
+  \begin{itemize}
+  \item Have a block available.
+  \item \utttrik{}
+  \item Bend right knee, place right hand on floor about a foot in
+    front of right foot.
+  \item Left hand on waist
+  \item Bring left foot in a little towards right foot
+  \item Raise left leg so parallel to floor
+  \item Extend right leg
+  \item If cannot extend right leg with hand on floor, put right hand
+    on block.
+  \item Can you raise your left arm towards ceiling?
+  \item Repeat on other side.
+  \end{itemize}
+\item \newpose{\parsvo{}} (full pose) \PC{6}{16}
+\item \ams{}  \PC{6}{17}
+\item \utt{} (concave back)  \PC{6}{18,19}
+  \begin{itemize}
+  \item Use blocks if neede
+  \item First with feet apart, then repeat with feet together.
+  \end{itemize}
+\item \padang{}  \PC{6}{20}
+\item \ardhal{}  \PC{6}{21}
+\item \ekapadsarv{}  \PC{6}{22}
+\item \sarv{}  \PC{6}{23}
+\item \hal{}  \PC{6}{24}
+\item \paschi{}  \PC{6}{26}
+  \begin{itemize}
+  \item skipping \karn{}
+  \end{itemize}
+\item \sav  \PC{6}{27}
+\end{poselist}
+
+
+\bibliography{yoga}
+\bibliographystyle{alpha}
+
+
+\end{document}
