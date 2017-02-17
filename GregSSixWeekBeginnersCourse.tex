@@ -1,6 +1,7 @@
 \documentclass{book}
 
 \usepackage{amsmath}
+\usepackage{capt-of}
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage[pdftex]{graphicx}
@@ -29,7 +30,7 @@
 \newcommand{\nam}{\apose{Namaskarasana}}
 \newcommand{\padadand}{\apose{Padanghusta Dandasana}}
 \newcommand{\padang}{\apose{Padangusthasana}}
-\newcommand{\parshastpad}{Parsva Hasta Padasana}
+\newcommand{\parshastpad}{\apose{Parsva Hasta Padasana}}
 \newcommand{\parsvo}{\apose{Parsvottanasana}}
 \newcommand{\paschi}{\apose{Paschimottanasana}}
 \newcommand{\paschbadhast}{\apose{Paschima Baddha Hastasana}}
@@ -54,12 +55,12 @@
 \newcommand{\vrk}{\apose{Vrksasana}}
 
 \newcommand{\poseFig}[1]{
-  \begin{wrapfigure}{r}{2.1in}
-    \begin{framed}
-      \includegraphics[width=2.0in]{Figures/{"#1"}.jpg}
-      \caption{{#1}}
-    \end{framed}
-  \end{wrapfigure}
+  \begin{minipage}{1.0in}
+    \includegraphics[height=1.0in, width=1.0in, keepaspectratio]{Figures/{"#1"}.jpg}
+    \captionof{figure}{{#1}}
+    \label{fig:\theweek.#1}
+    \vspace{1ex}
+  \end{minipage}
 }
 
 \newcommand{\amsFig}{\poseFig{Adho Mukha Svanasana}}
@@ -76,7 +77,7 @@
 \newcommand{\namFig}{\poseFig{Namaskarasana}}
 \newcommand{\padadandFig}{\poseFig{Padanghusta Dandasana}}
 \newcommand{\padangFig}{\poseFig{Padangusthasana}}
-\newcommand{\parshastpadFig}{Parsva Hasta Padasana}
+\newcommand{\parshastpadFig}{\poseFig{Parsva Hasta Padasana}}
 \newcommand{\parsvoFig}{\poseFig{Parsvottanasana}}
 \newcommand{\paschiFig}{\poseFig{Paschimottanasana}}
 \newcommand{\paschbadhastFig}{\poseFig{Paschima Baddha Hastasana}}
@@ -234,7 +235,6 @@ life.
 \label{seq:1}
 
 \pose{\newpose{\sav{}} \posenote{not given as first pose in PC}}
-\savFig
 
 Have several blankets available if needed.
 
@@ -256,7 +256,6 @@ Now try to increase the distance between top of shoulders and ears
 (i.e. lower shoulders) while keeping arms straight above head.
 
 \pose{\newpose{\tad{}}, against a wall \PC{1}{1}}
-\tadFig
 
  Now we are going to attempt to replicate the pose we just did
  on the floor, with the help of gravity, while standing.
@@ -288,7 +287,6 @@ heels, buttocks', shoulder blades, and back of head.
 
 
 \pose{\newpose{\urdhast{}} \PC{1}{2}}
-\urdhastFig{}
 
 Now raise your arms above your head. This is called \urdhast{}
 (arms). Recall where they were when you were on your back; can you
@@ -299,7 +297,6 @@ but make palms parallel.
 Lower shoulders away from ears.
 
 \pose{\newpose{\urdbad{}} \PC{1}{3}}
-\urdbadFig{}
 
 Bring your arms down to pointing straight in front of you.
 
@@ -315,10 +312,8 @@ thumb is on top, repeat.
 
 
 \pose{\newpose{\nam{}} \PC{1}{4}}
-\namFig{}
 
 \pose{\newpose{\urdnam{}} from \urdhast{} \PC{1}{5}}
-\urdnamFig{}
 
 
 \textbf{Interlude}. So far everything has been perfectly straight and
@@ -335,7 +330,6 @@ Hastasana (rotated 90\textdegree). Below waist is \tad.
 
 
 \pose{\newpose{\utthastpad} \PC{1}{6}}
-\utthastpadFig{}
 
 Left foot to wall.
 
@@ -345,7 +339,6 @@ balance front-to-back, left to right.
 Lift trunk and chest. Lower shoulders
 
 \pose{\newpose{\parshastpad} \PC{1}{7}}
-\parshastpad{}
 
 
 Turn right leg out 90\textdegree. Right heel in line with center of
@@ -356,7 +349,6 @@ of mat; torso facing forward; face facing forward. Are hips even (same
 height)?
 
 \pose{\newpose{\utttrik} \PC{1}{8}}
-\utttrikFig{}
 
 
 Extend the right arm out as you bend at the waist and bring the right
@@ -376,7 +368,6 @@ feedback to buttocks, shoulder blades, and head about alignment.
 Trikonasana) on opposite side (left foot to the wall).
 
 \pose{\newpose{\parsvo{} (concave back) \PC{1}{9}}}
-\parsvoFig
 
 Grab two blocks.
 
@@ -394,7 +385,6 @@ Put blocks at whatever height allows you to keep concave back.
 Repeat with right foot to wall.
 
 \pose{\newpose{\praspad} (concave back) \PC{1}{10}}
-\praspadFig
 
 Wide separation of feet. Feet parallel to each other; even
 w.r.t. distance from edge of mat.
@@ -407,26 +397,44 @@ Hips over (in line with) feet. Weight even front-to-back on
 feet. Feet flat, weight even inner-to-outer on feet.
 
 \pose{\newpose{\dand}  \PC{1}{11}}
-\dandFig
 
 \pose{\newpose{\urdhastdand} \PC{1}{12}}
-\urdhastdandFig
 
 \pose{\newpose{\padadand} \PC{1}{13}}
-\padadandFig
 
 Use a belt for integrity of back.
 
 Concave back
 
 \pose{\newpose{\paschi} \PC{1}{14}}
-\paschiFig
 
 This is a good time to remind students to not be attached to the
 perfect form/geometry of the asana, but to consider the goals.
 
 \pose{\sav}
-\savFig
+
+\section{Sequence (Images) for Week 1}
+\label{seqimags:1}
+
+\begin{tabular}{|c|c|c|c|c|}
+\savFig{} &
+\tadFig{} &
+\urdhastFig{} &
+\urdbadFig{} &
+\namFig{} \\ \hline
+\urdnamFig{} & 
+\utthastpadFig{} &
+\parshastpadFig{} &
+\utttrikFig{} &
+\parsvoFig \\ \hline
+\praspadFig &
+\dandFig &
+\urdhastdandFig &
+\padadandFig &
+\paschiFig \\ \hline
+\savFig & & & &
+\end{tabular}
+
 
 
 \week{2}
@@ -441,32 +449,22 @@ perfect form/geometry of the asana, but to consider the goals.
 \label{seq:2}
 
 \pose{\tad{} \PC{2}{1}}
-\tadFig
 
 \pose{\urdhast{} \PC{2}{2}}
-\urdhastFig
 
 \pose{\urdbad{} \PC{2}{3}}
-\urdbadFig
 
 \pose{\nam{} \PC{2}{4}}
-\namFig{}
 
 \pose{\urdnam{} \PC{2}{5}}
-\urdnamFig{}
-
 
 \pose{\utthastpad{} \PC{2}{6}}
-\utthastpadFig{}
 
 \pose{\parshastpad{} \PC{2}{7}}
-\parshastpadFig{}
 
 \pose{\utttrik{} \PC{2}{8}}
-\utttrikFig{}
 
 \pose{\newpose{\viraii{}} \PC{2}{9}}
-\viraiiFig{}
 
 Start in \parshastpad{} - as in start of \utttrik{}.
 
@@ -481,8 +479,6 @@ Look over front arm.
 Repeat on other side
 
 \pose{\newpose{\uttparsva{}} \PC{2}{10}}
-\uttparsvaFig{}
-
 
 Again, start in \parshastpad{}
 
@@ -502,10 +498,8 @@ Rotate left arm as in \utthastpad{}
 See if you can bring arm down alongside ear.
 
 \pose{\parsvo{} (standing, then concave back) \PC{2}{11}}
-\parsvoFig{}
 
 \pose{\newpose{\parsvo{}} \PC{2}{12}}
-\parsvoFig{}
 
 Bend at waist, sternum directly over front knee, put hands on
 blocks (at highest setting), keeping back concave.
@@ -515,19 +509,14 @@ Now walk blocks forward, extending back.
 Finally, bring head down over knee.
 
 \pose{\praspad{} \PC{2}{13}}
-\praspadFig{}
 
 \pose{\dand{} \PC{2}{14}}
-\dandFig{}
 
 \pose{\urdhastdand{} \PC{2}{15}}
-\urdhastdandFig{}
 
 \pose{\padadand{} \PC{2}{16}}
-\padadandFig{}
 
 \pose{\newpose{\ardhal{}} to chair (P.51) \PC{2}{17}}
-\ardhalFig{}
 
 Get 4 blankets, a block, and a chair
 
@@ -546,11 +535,33 @@ in. Hands on mid-to-upper back. Use hands to lift hips and
 straighten back.
 
 \pose{\paschi{} \PC{2}{18}}
-\paschiFig{}
 
 \pose{\sav{} \PC{2}{19}}
-\savFig{}
   
+\section{Sequence (Images) for Week 2}
+\label{seqimags:2}
+
+\begin{tabular}{|c|c|c|c|c|}
+\tadFig &
+\urdhastFig &
+\urdbadFig &
+\namFig{} &
+\urdnamFig{} \\ \hline
+\utthastpadFig{} &
+\parshastpadFig{} &
+\utttrikFig{} &
+\viraiiFig{} &
+\uttparsvaFig{} \\ \hline
+\parsvoFig{} &
+\parsvoFig{} &
+\praspadFig{} &
+\dandFig{} &
+\urdhastdandFig{} \\ \hline
+\padadandFig{} &
+\paschiFig{} &
+\savFig{}
+\end{tabular}
+
 \week{3}
 \label{week:3}
 
@@ -562,13 +573,10 @@ straighten back.
 \label{seq:3}
 
 \pose{\tad{} \PC{3}{1}}
-\tadFig{}
 
 \pose{\urdbad{} \PC{3}{2}}
-\urdbadFig{}
 
 \pose{\newpose{\vrk{}} \PC{3}{3}}
-\vrkFig{}
 
 
 Stand with back to wall, far enough away so that can reach back to
@@ -597,16 +605,12 @@ Can you bring your hands together into Urdhva Namaskarasana?
 Lower arms, lower right leg, repeat with left leg.
 
 \pose{\utttrik{} \PC{3}{4}}
-\utttrikFig{}
 
 \pose{\viraii{} \PC{3}{5}}
-\viraiiFig{}
 
 \pose{\uttparsva{} \PC{3}{6}}
-\uttparsvaFig{}
 
 \pose{\newpose{\virai{}} (turning the trunk) \PC{3}{7}}
-\viraiFig{}
 
 Stand left foot to wall. Turn front foot 90\textdegree out, back
 foot in 60\textdegree.
@@ -621,7 +625,6 @@ help turn the pelvis.
 Repeat on other side.
 
 \pose{\newpose{\utka{}} (arms first) \PC{3}{8}}
-\utkaFig{}
 
 
 Arms up straight in \urdnam{}.
@@ -633,14 +636,12 @@ Bend the knees until thighs are parallel to floor. Keep heels
 down.
 
 \pose{\parsvo{} \PC{3}{9}}
-\parsvoFig{}
 
 Start with concave stage (use blocks if necessary)
 
 Then head down
 
 \pose{\newpose{\badhastutt{}} \PC{3}{10}}
-\badhastuttFig{}
 
 
 Start in \tad{}, feet apart.
@@ -652,12 +653,10 @@ Exhale, stretch the trunk up, then forward, then down.
 Come up, change the crossing of the arms, and repeat.
 
 \pose{\ardhal{}, to chair \PC{3}{11}}
-\ardhalFig{}
 
 \pose{\paschi{} \PC{3}{12}}
 
 \pose{\newpose{setubandsarv{}} (cross bolsters) \PC{3}{13}}
-setubandsarvFig{}
 
 
 Get two bolsters - a round and a flat.
@@ -675,8 +674,26 @@ Stretch legs straight, heels resting on floor.
 Arms out to the side.
 
 \pose{\sav{}  \PC{3}{14}}
-\savFig{}
 
+  
+\section{Sequence (Images) for Week 3}
+\label{seqimags:3}
+
+\begin{tabular}{|c|c|c|c|c|}
+\tadFig{} &
+\urdbadFig{} &
+\vrkFig{} &
+\utttrikFig{} &
+\viraiiFig{} \\ \hline
+\uttparsvaFig{} &
+\viraiFig{} &
+\utkaFig{} &
+\parsvoFig{} &
+\badhastuttFig{} \\ \hline
+\ardhalFig{} &
+\setubandsarvFig{} &
+\savFig{}
+\end{tabular}
 
 \week{4}
 \label{week:4}
@@ -689,22 +706,16 @@ Arms out to the side.
 \label{seq:4}
 
 \pose{\tad{} \PC{4}{1}}
-\tadFig{}
 
 \pose{\urdbad{} \PC{4}{2}}
-\urdbadFig{}
 
 \pose{\utttrik{} \PC{4}{3}}
-\utttrikFig{}
 
 \pose{\viraii{} \PC{4}{4}}
-\viraiiFig{}
 
 \pose{\uttparsva{} \PC{4}{5}}
-\uttparsvaFig{}
 
 \pose{\newpose{\vim{}} \PC{4}{6}}
-\vimFig{}
 
 
 Left foot to wall
@@ -724,8 +735,6 @@ Straighten front leg, turn feet parallel,
 Repeat on other side.
 
 \pose{\newpose{\virai{}} \PC{4}{7}}
-\viraiFig{}
-
 
 Start with \vim{}
 
@@ -736,13 +745,10 @@ Experiment with starting with hands on waist, then knee bend, then
 bending leg.
 
 \pose{\utka{}  \PC{4}{8}}
-\utkaFig{}
 
 \pose{\parsvo{} \PC{4}{9}}
-\parsvoFig{}
 
 \pose{\newpose{\utt{}} (full pose) \PC{4}{10}}
-\uttFig{}
 
 Get two blocks in case needed
 
@@ -760,10 +766,8 @@ hands to floor or blocks.
 Bend at hips, keeping back extended.
 
 \pose{\ardhal{} (from chair) \PC{4}{11}}
-\ardhalFig{}
 
 \pose{\newpose{\ekapadsarv{}} (from \ardhal{} on chair) \PC{4}{12}}
-\ekapadsarvFig{}
 
 From \ardhal{}, left right leg straight towards ceiling.
 
@@ -772,13 +776,32 @@ Keep back straight.
 Bring right leg down, repeat with left leg.
 
 \pose{\paschi{} \PC{4}{13}}
-\paschiFig{}
 
 \pose{\setubandsarv{} \PC{4}{14}}
-\setubandsarvFig{}
 
 \pose{\sav{} \PC{4}{15}}
+
+
+\section{Sequence (Images) for Week 4}
+\label{seqimags:4}
+
+\begin{tabular}{|c|c|c|c|c|}
+\tadFig{} & 
+\urdbadFig{} & 
+\utttrikFig{} & 
+\viraiiFig{} & 
+\uttparsvaFig{} \\ \hline
+\vimFig{} & 
+\viraiFig{} & 
+\utkaFig{} & 
+\parsvoFig{} & 
+\uttFig{} \\ \hline
+\ardhalFig{} & 
+\ekapadsarvFig{} & 
+\paschiFig{} & 
+\setubandsarvFig{} & 
 \savFig{}
+\end{tabular}
 
 
 \week{5}
@@ -792,28 +815,20 @@ Bring right leg down, repeat with left leg.
 \label{seq:5}
 
 \pose{\tad{} \PC{5}{1}}
-\tadFig{}
 
 \pose{\urdhast{} \PC{5}{2}}
-\urdhastFig{}
 
 \pose{\urdbad{}  \PC{5}{3}}
-\urdbadFig{}
 
 \pose{\nam{}  \PC{5}{4}}
-\namFig{}
 
 \pose{\urdnam{} from \urdhast{}  \PC{5}{5}}
-\urdnamFig{}
 
 \pose{\newpose{\paschbadhast{}}  \PC{5}{6}}
-\paschbadhastFig{}
 
 Hands behind back, hold elbows.
 
 \pose{\newpose{\gomu{}} (arms only) \PC{5}{7}}
-\gomuFig{}
-
 
 Get a belt, drape over right shoulder.
 
@@ -831,8 +846,6 @@ hand. See if can walk hands towards each other along belt.
 Head up, abdomen in.
 
 \pose{\newpose{\paschnama{}}  \PC{5}{8}}
-\paschnamaFig{}
-
 
 Move shoulder blades towards each other and into back.
 
@@ -841,37 +854,26 @@ Scooch hands up back.
 Can you rotate hands and arms so that thumbs come together?
 
 \pose{\vrk{} \PC{5}{9}}
-\vrkFig{}
 
 \pose{\utka{} \PC{5}{10}}
-\utkaFig{}
 
 \pose{\utthastpad{} \PC{5}{11}}
-\utthastpadFig{}
 
 \pose{\uttparsva{}  \PC{5}{12}}
-\uttparsvaFig{}
 
 \pose{\utttrik{}  \PC{5}{13}}
-\utttrikFig{}
 
 \pose{\viraii{} \PC{5}{14}}
-\viraiiFig{}
 
 \pose{\uttparsva{}  \PC{5}{15}}
-\uttparsvaFig{}
 
 \pose{\vim{}  \PC{5}{16}}
-\vimFig{}
 
 \pose{\virai{} \PC{5}{17}}
-\viraiFig{}
 
 \pose{\newpose{\praspad{}} (full pose)  \PC{5}{18}}
-\praspadFig{}
 
 \pose{\newpose{\ams{}}  \PC{5}{19}}
-\amsFig{}
 
 
 Mat to wall, stand against wall.
@@ -897,7 +899,6 @@ Now keep buttocks up high while lengthening calves and ankle to
 bring heels down towards floor.
 
 \pose{\newpose{\utt{}} (concave back)  \PC{5}{20}}
-\uttFig{}
 
 
 Get 2 blocks
@@ -913,7 +914,6 @@ Weight even on feet front to back.
 repeat with feet together.
 
 \pose{\newpose{\padang{}}  \PC{5}{21}}
-\padangFig{}
 
 
 Use belt if cannot grab toes.
@@ -923,17 +923,14 @@ Start with concave back. Head looking up/forward.
 Then release into head down.
 
 \pose{\ardhal{} (with chair)  \PC{5}{22}}
-\ardhalFig{}
 
 
 Teach use of belt, as preparation for \sarv{}.
 
 \pose{\newpose{\ekapadsarv{}} (from \ardhal{})  \PC{5}{23}}
-\ekapadsarvFig{}
 
 
 \pose{\newpose{\sarv{}} (from \ardhal{})  \PC{5}{24}}
-\sarvFig{}
 
 
 Staying in \ardhal{},
@@ -947,7 +944,6 @@ Straighten back using hands.
 Bring hands higher on back (towards neck).
 
 \pose{\newpose{\hal{}}  \PC{5}{25}}
-\halFig{}
 
 
 Bring legs down to chair, into \ardhal{}.
@@ -959,13 +955,44 @@ Bring legs down, bringing feet to floor.
 Hips should be over head.
 
 \pose{\paschi{}  \PC{5}{27}}
-\paschiFig{}
 
     (skipping \karn{})
 
 \pose{\sav{}  \PC{5}{18}}
-\savFig{}
 
+
+\section{Sequence (Images) for Week 5}
+\label{seqimags:5}
+
+\begin{tabular}{|c|c|c|c|c|}
+\tadFig{} & 
+\urdhastFig{} & 
+\urdbadFig{} & 
+\namFig{} & 
+\urdnamFig{} \\ \hline
+\paschbadhastFig{} & 
+\gomuFig{} & 
+\paschnamaFig{} & 
+\vrkFig{} & 
+\utkaFig{} \\ \hline
+\utthastpadFig{}  & 
+\uttparsvaFig{} & 
+\utttrikFig{} & 
+\viraiiFig{} & 
+\uttparsvaFig{} \\ \hline
+\vimFig{} & 
+\viraiFig{} & 
+\praspadFig{} & 
+\amsFig{} & 
+\uttFig{} \\ \hline
+\padangFig{} & 
+\ardhalFig{} & 
+\ekapadsarvFig{} & 
+\sarvFig{} & 
+\halFig{} \\ \hline
+\paschiFig{} & 
+\savFig{}
+\end{tabular}
 
 \week{6}
 \label{week:6}
@@ -978,49 +1005,34 @@ Hips should be over head.
 \label{seq:6}
 
 \pose{\tad{} \PC{6}{1}}
-\tadFig{}
 
 \pose{\urdbad{}  \PC{6}{2}}
-\urdbadFig{}
 
 \pose{\paschbadhast{}  \PC{6}{3}}
-\paschbadhastFig{}
 
 \pose{\gomu{}  \PC{6}{4}}
-\gomuFig{}
 
 \pose{\paschbadhast{}  \PC{6}{5}}
-\paschbadhastFig{}
 
 \pose{\vrk{}  \PC{6}{6}}
-\vrkFig{}
 
 \pose{\utka{}  \PC{6}{7}}
-\utkaFig{}
 
 \pose{\utthastpad  \PC{6}{8}}
-\utthastpadFig{}
 
 \pose{\parshastpad{}  \PC{6}{9}}
-\parshastpadFig{}
 
 \pose{\utttrik{}  \PC{6}{10}}
-\utttrikFig{}
 
 \pose{\viraii  \PC{6}{11}}
-\viraiiFig{}
 
 \pose{\uttparsva  \PC{6}{12}}
-\uttparsvaFig{}
 
 \pose{\vim  \PC{6}{13}}
-\vimFig{}
 
 \pose{\virai \PC{6}{14}}
-\viraiFig{}
 
 \pose{\newpose{\ardchand{}}  \PC{6}{15}}
-\ardchandFig{}
 
 
 Have a block available.
@@ -1046,41 +1058,63 @@ Can you raise your left arm towards ceiling?
 Repeat on other side.
 
 \pose{\newpose{\parsvo{}} (full pose) \PC{6}{16}}
-\parsvoFig{}
 
 \pose{\ams{}  \PC{6}{17}}
-\amsFig{}
 
 \pose{\utt{} (concave back)  \PC{6}{18,19}}
-\uttFig{}
 
 
-Use blocks if neede
+Use blocks if needed
 
 First with feet apart, then repeat with feet together.
 
 \pose{\padang{}  \PC{6}{20}}
-\padangFig{}
 
 \pose{\ardhal{}  \PC{6}{21}}
-\ardhalFig{}
 
 \pose{\ekapadsarv{}  \PC{6}{22}}
-\ekapadsarvFig{}
 
 \pose{\sarv{}  \PC{6}{23}}
-\sarvFig{}
 
 \pose{\hal{}  \PC{6}{24}}
-\halFig{}
 
 \pose{\paschi{}  \PC{6}{26}}
-\paschiFig{}
 
     skipping \karn{}
 
 \pose{\sav  \PC{6}{27}}
+
+
+\section{Sequence (Images) for Week 6}
+\label{seqimags:6}
+
+\begin{tabular}{|c|c|c|c|c|}
+\tadFig{} & 
+\urdbadFig{} & 
+\paschbadhastFig{} & 
+\gomuFig{} & 
+\paschbadhastFig{} \\ \hline
+\vrkFig{} & 
+\utkaFig{} & 
+\utthastpadFig{} & 
+\parshastpadFig{} & 
+\utttrikFig{}  \\ \hline
+\viraiiFig{} & 
+\uttparsvaFig{} & 
+\vimFig{} & 
+\viraiFig{} & 
+\ardchandFig{} \\ \hline
+\parsvoFig{} & 
+\amsFig{} & 
+\uttFig{} & 
+\padangFig{} & 
+\ardhalFig{} \\ \hline
+\ekapadsarvFig{} & 
+\sarvFig{} & 
+\halFig{} & 
+\paschiFig{} & 
 \savFig{}
+\end{tabular}
 
 
 \bibliography{yoga}
