@@ -184,12 +184,12 @@
 \newcounter{week}
 \newcounter{pose}
 
+% a week is a chapter
 \newcommand{\week}[1]
 { \IfDecimal{#1}{\setcounter{week}{\integerpart}}{fooey}
   \setcounter{pose}{1}
   \chapter{Week {#1}}}
 
-% a week is a chapter
 \titleformat{\chapter}[frame]
 {} % format
 {} % label
@@ -212,7 +212,6 @@
 {1pc} % after-sep
 % [] % right-sep
 
-
 \newcommand{\linknote}[1]{\todo[color=green!40]
   {\small Linking: #1}}
 \newcommand{\actionnote}[1]{\todo[color=cyan!40]
@@ -226,10 +225,22 @@
 \setlength{\parskip}{1ex}
 
 
-\title{Six Week Iyengar Yoga Course for Beginners}
-\author{Greg Sullivan \href{mailto:gregs@sulliwood.org}{gregs@sulliwood.org} \\
-For Heart of Iyengar Yoga Teacher Training course with Peentz Dubble
+\title{Six Week Iyengar Yoga Course for Beginners\\
+  \begin{minipage}{1.0\linewidth}
+    \vspace{1.0in}
+    {\large For Heart of Iyengar Yoga Teacher Training course \\
+      with Peentz Dubble}
+  \end{minipage}
+  \begin{minipage}{1.0\linewidth}
+    \vspace{1.0in}
+    {\small Source (LaTeX) for this document is available at\\
+      \url{https://github.com/gregsgit/yogasixweekbeginner}.}
+  \end{minipage}
 }
+
+\author{Greg Sullivan \\
+  \href{mailto:gregs@sulliwood.org}{gregs@sulliwood.org}}
+
 \date{March 11, 2017}
 
 \begin{document}
@@ -270,21 +281,21 @@ classes.
 
 Yoga, and in particular asana practice, is not about how you look. If
 your pose is not geometrically perfect, you are not a failure. One of
-the lessons that yoga teaches is vairagya, detachment. Along with
-detachment is non-judgement. Judging yourself, in an asana, as ``good''
-or ``bad'' is not helpful. The question is ``what is the goal?'' How do
-you strive towards the goal? In this way, asana practice is a
-microcosm of ``life practice''. The concept of ``bringing yoga off the
-mat'' is important
+the lessons that yoga teaches is \emph{Vairagya}, detachment. Along
+with detachment is non-judgement. Judging yourself, in an asana, as
+``good'' or ``bad'' is not helpful. The question is ``what is the
+goal?'' How do you strive towards the goal? In this way, asana
+practice is a microcosm of ``life practice''. The concept of
+``bringing yoga off the mat'' is important
 
 I have mostly followed the sequences given for the first six weeks in
 Geeta Iyengar's \emph{Preliminary Course}\cite{GeetaPC}, abbreviated
 ``PC''. For each pose given, I indicate whether it was in that week's
 sequence in PC, and, if so, which number in the sequence in PC.
-For example, if the fourth pose in week 2 is \nam{}, and it is also
+For example, if the fifth pose in week 2 is \nam{}, and it is 
 the fourth pose in the week 2 syllabus in PC, I will write:
 
-\fbox{w2.p4} \nam{} \PC{2}{4}
+\fbox{w2.p5} \nam{} \PC{2}{4}
 
 \section*{Formatting Notes}
 \label{chap:formatting}
@@ -304,6 +315,13 @@ Margin notes are in variously colored boxes. \actionnote{primary
 like this.}\termnote{Notes on terminology look like
 this.}\themenote{and theme notes look like this.}
 
+When a pose is repeated from an earlier week, I will generally not
+repeat the primary actions and linked poses/actions, though of course
+they would be given verbally. Also, if a pose includes aspects of
+other poses, and that is made clear in the instructions, I will
+generally not further highlight that the poses are connected, as it is
+already clear in the text. 
+
 
 \week{1}
 \label{week:1}
@@ -315,8 +333,8 @@ life; how looking for alignment and balance in asana can be brought
 ``off the mat'' to bring alignment and balance in the rest of one's
 life.
 
-\section{Sequence with Instructions for Week 1}
-\label{seq:1}
+% \section{Sequence with Instructions for Week 1}
+% \label{seq:1}
 
 \pose{\newpose{\sav{}} \posenote{not given as first pose in PC}}
 
@@ -356,7 +374,7 @@ reverse -- shrugging shoulders up towards ears; then reverse.
 
 Now we are going to attempt to replicate the pose we just did
 on the floor, with the help of gravity, while standing.
-\linknote{Same shape between \tad{} and \sav{}}
+\linknote{\sav{}}
 
 In \sav{}, the floor was a useful reference point -- we
 could tell if our hips were even, or our shoulder blades were
@@ -383,9 +401,13 @@ Consider your left foot. Is the weight evenly balanced on the ``4
 corners''\termnote{4 corners of foot.} of the foot? Same for right
 foot.
 
-Abdomen in, lift chest. Shoulders slightly back.\actionnote{Lift chest.}
+Abdomen in, lift chest. Shoulders slightly back.\actionnote{Lift
+  chest.} 
 
-Shoulder blades slightly towards each other.
+Shoulder blades slightly towards each other. Have shoulder blades
+lightly touching the wall. Can you keep your feet planted firmly on
+the floor while sliding your shoulder blades up the wall? Is your back
+getting longer when you do that?
 
 Lower your shoulders away from your ears.\linknote{Shoulders lowered
   as in \sav{}.}
@@ -407,9 +429,8 @@ but make palms parallel.\linknote{\urdhast{} arms in \sav{}.}
 Can you bring your arms as close to the wall as they were to the floor
 in \sav{}?\actionnote{Rotate arms inward.}
 
-Lower shoulders away from ears.\actionnote{Lower shoulders.}
-
 \newpage
+Lower shoulders away from ears.\actionnote{Lower shoulders.}
 
 \mbox{ }
 
@@ -432,6 +453,8 @@ towards each other.\actionnote{Elbows straight, towards each other.}
 Lower your arms, change the interlock of your fingers so that other
 thumb is on top, repeat.
 
+\mbox{ }
+
 \pose{\newpose{\nam{}} \PC{1}{4}}
 % \namMarginFig{}
 
@@ -443,6 +466,10 @@ slightly back?\actionnote{Shoulders back slightly, open chest.}
 
 Without disturbing any elements of \tad{}?
 
+Can you expand your chest towards your hands?
+
+\mbox{ }
+
 \mbox{ }
 
 \mbox{ }
@@ -453,6 +480,11 @@ Without disturbing any elements of \tad{}?
 \urdnamFig{}
 How close can you bring your palms while maintaining the integrity of
 the pose? What is preventing you from bringing your palms together?
+
+
+\newpage 
+
+\mbox{ }
 
 \mbox{ }
 
@@ -468,8 +500,6 @@ balanced, left to right, top to bottom. Now we're going to branch out.
 \mbox{ }
 
 \end{framed}
-
-\newpage 
 
 \pose{\newpose{Half \utt{}} (not in PC)}
 
@@ -511,6 +541,12 @@ slightly. Everything else unchanged. Hips still parallel to long edge
 of mat; torso facing forward; face facing forward. Are hips even (same
 height)?
 
+\newpage
+
+\mbox{ }
+
+\mbox{ }
+
 The only thing about your pose that should have changed is your right
 leg.\themenote{Keeping some elements of pose/body the same, while
   changing others.}
@@ -518,19 +554,24 @@ leg.\themenote{Keeping some elements of pose/body the same, while
 Are your arms getting tired?\themenote{Body awareness; how heavy are
   your arms?}
 
-\newpage
+\mbox{ }
+
+\mbox{ }
+
+\mbox{ }
+
 
 \pose{\newpose{\utttrik{}} \PC{1}{8}}
 % \utttrikMarginFig{}
 
-\utttrikFig{}
-Extend the right arm out as you bend at the waist and bring the right
-arm down to the shin. Place your left arm on your left waist. Keep
-your torso perpendicular to the ground, requiring rotation
-right-to-left of the torso. Now bring left arm up, pointing to
-ceiling; two arms going in opposite directions. Lower shoulders
-(increase distance between ears and shoulders). Are hips perpendicular
-to the wall?
+\utttrikFig{} Extend the right arm out as you bend at the waist and
+bring the right arm down to the shin. Place your left arm on your left
+waist. Keep your torso perpendicular to the ground, requiring rotation
+right-to-left of the torso\actionnote{Rotation of torso and
+  spine.}. Now bring left arm up, pointing to ceiling; two arms going
+in opposite directions\actionnote{Arms extending away from each
+  other.}. Lower shoulders (increase distance between ears and
+shoulders). Are hips perpendicular to the floor?
 
 Are both sides of torso same length? Or did lower torso shorten? How
 to lengthen lower torso? What does pelvis want to do - rotate left
@@ -554,15 +595,15 @@ feedback to buttocks, shoulder blades, and head about alignment.
 \parsvoConcFig{}
 Grab two blocks.
 
-Left foot to wall, Parsva Hasta Padasana. Now turn back foot in more,
-and rotate hips to parallel wall. Hands to hips. Balance pelvis -
+Left foot to wall, \parshastpad{}. Now turn back foot in more, and
+rotate hips to parallel wall. Hands to hips. Balance pelvis -
 front-to-back and side-to-side. Chest facing front of mat, head facing
 straight ahead.
 
 Extend back, make concave, look up.
 
 Now bend so that torso is parallel to floor (recall half-uttanasana).
-\linknote{link to half \utt{}.}
+\linknote{Half \utt{}.}
 
 Put blocks at whatever height allows you to keep concave back.
 
@@ -591,17 +632,16 @@ feet. Feet flat, weight even inner-to-outer on feet.
 \dandFig{}
 May want to sit on some blankets. (Show how to fold two blankets.)
 
-Sitting on floor. Knees pointing up, feet together -- same as
-\sarv{}\linknote{\sarv{} legs.}
+Sitting on floor. Knees pointing up, feet together.
 
 Abdomen perpendicular to floor, chest lifted -- same as \tad{}.
 
 This is same body position as half \utt{}.\linknote{Rotation of half
   \utt{}.}
 
-Put your hands on floor next to hips and press down to elongate the
-back.\actionnote{Use hands to elongate back.}
-
+Put your hands on floor, fingers facing forward, next to hips and
+press down to elongate the back.\actionnote{Use hands to elongate
+  back.}
 
 \pose{\newpose{\urdhastdand{}} \PC{1}{12}}
 % \urdhastdandMarginFig{}
@@ -634,10 +674,6 @@ Concave back. Shoulders as in \tad{}.\actionnote{Concave back,
 \mbox{ } 
 
 \mbox{ } 
-
-\mbox{ } 
-
-\newpage
 
 
 \pose{\newpose{\paschi{}} \PC{1}{14}}
@@ -694,8 +730,8 @@ from first week, and some strengthening.
 
 \textbf{Reading}:
 
-\section{Sequence with Instructions for Week 2}
-\label{seq:2}
+% \section{Sequence with Instructions for Week 2}
+% \label{seq:2}
 
 \pose{\tad{} \PC{2}{1}}
 
@@ -755,7 +791,7 @@ Repeat for each thumb on top.
 
 \utttrikFig{}
 Finer points: Weight on back leg (at least even with weight on front
-leg). Action to length lower abdomen. 
+leg). Action to lengthen lower abdomen. 
 
 May try against wall.
 
@@ -770,14 +806,13 @@ May try against wall.
 \pose{\newpose{\viraii{}} \PC{2}{9}}
 %\viraiiMarginFig{}
 
-\viraiiFig{}
-Start in \parshastpad{} - as in start of \utttrik{}.\linknote{Related
-  to \utttrik{}.}
+\viraiiFig{} Start in \parshastpad{} - as in start of
+\utttrik{}.\linknote{ \utttrik{}.}
 
 (do pose with hands on waist first, then with arms extended)
 
 Keeping everything stable, bend right knee to 90\textdegree
-\themenote{Visually verify 90\textdegree.}
+\themenote{Visually verify 90\textdegree.}.
 
 Is torso centered over hips, between feet?
 
@@ -799,14 +834,14 @@ Have a block handy, about 4 feet from wall.
 Again, start in \parshastpad{}
 
 Again, bend right knee to 90\textdegree. Same as
-\viraii{}.\linknote{Connect to \viraii{}.}
+\viraii{}.\linknote{\viraii{}.}
 
 Left hand on waist.
 
 Bring right hand to floor, or block, keeping chest facing wall in
 front of you (perpendicular to floor).
 
-Rotate abdomen.
+Rotate abdomen.\actionnote{Rotation of abdomen.}
 
 Raise left arm towards ceiling.
 
@@ -817,7 +852,8 @@ If not, what is getting in the way?
 
 Are your quadriceps getting tired?\themenote{Strength.}
 
-\pose{\parsvoconc{} (standing, then concave back) \PC{2}{11}}
+\pose{\parsvoconc{} (standing, \newline
+  then concave back) \PC{2}{11}}
 \parsvoConcMarginFig{}
 
 Use two blocks to keep back concave.
@@ -829,16 +865,17 @@ Look forward.
 % \parsvoMarginFig{}
 
 \parsvoFig{}
-Bend at waist, sternum directly over front knee, put hands on
-blocks (at highest setting), keeping back concave.
+Bend at waist, sternum directly over front knee, put hands on blocks
+(at highest setting)\termnote{The 3 ``settings'' of a block.}, keeping
+back concave.
 
 Now walk blocks forward, extending back.
 
 Finally, bring head down over knee.
 
 Process of bringing head down is similar to
-\paschi{}\linknote{Bringing head down as in \paschi{}.} 
-Extend back first. Aim chest towards shin.
+\paschi{}\linknote{Bringing head down as in \paschi{}.}.  Extend back
+first. Aim chest towards shin.
 
 Finally allow back and neck to relax and bring head down. 
 
@@ -876,9 +913,9 @@ On blankets if needed.
 % \ardhalMarginFig{}
 
 \ardhalFig{}
-Get 4 blankets, a block, and a chair
+Get 4 blankets, a block, and a chair.
 
-3 blankets - set up as for Sarvangasana.
+Use 3 blankets - set up as for Sarvangasana.
 
 Chair at head, 1 blanket on chair. Block for tailbone.
 
@@ -933,8 +970,8 @@ on chair, \setubandsarv{})
 
 \textbf{Reading}: 
 
-\section{Sequence with Instructions for Week 3}
-\label{seq:3}
+% \section{Sequence with Instructions for Week 3}
+% \label{seq:3}
 
 \pose{\tad{} \PC{3}{1}}
 \tadMarginFig{}
@@ -963,9 +1000,12 @@ Place right foot high on inside of left thigh.
 Push thigh out against foot, foot in against thigh.\themenote{Opposing
   actions.} 
 
-Push knee back - lengthen inner right thigh, pull in outer right
-thigh (also oppositional actions). Same thigh actions as \viraii{} and
-\uttparsva{}\linknote{Knee and thigh actions of \viraii{} and \uttparsva{}}
+\newpage
+
+Push knee back - lengthen inner right thigh, pull in outer right thigh
+(also oppositional actions). Same thigh actions as \viraii{},
+\utttrik{}, and \uttparsva{}\linknote{Knee and thigh actions of
+  \viraii{}, \utttrik{} and \uttparsva{}}
 
 Can you get your knee parallel with wall (perpendicular to gaze)?
 
@@ -988,11 +1028,15 @@ Lower arms, lower right leg, repeat with left leg.
 \pose{\uttparsva{} \PC{3}{6}}
 \uttparsvaMarginFig{}
 
+\mbox{ }
+
+\mbox{ }
+
 \pose{\newpose{\vim{}} \PC{4}{6}}
 % \vimMarginFig{}
 
 \vimFig{}
-Stand left foot to wall. Turn front foot 90\textdegree out, back
+Stand left foot to wall. Turn front foot 90\textdegree\ out, back
 foot in 60\textdegree.\linknote{As in \parsvo{}, coming up}
 
 Turn the trunk to face away from wall.
@@ -1042,7 +1086,7 @@ Start in \tad{}, feet apart.
 \badhasttad{} arms. Remember which arm is on top.
 
 Exhale, stretch the trunk up, then forward, then
-down.\actionnote{Extend the back}.
+down\actionnote{Extend the back}.
 
 Keep arms in line with back (don't bring arms closer to legs than head
 with neck straight).
@@ -1117,8 +1161,8 @@ towards \sarv{} (\ekapadsarv{} from \ardhal{} on chair).
 
 \textbf{Reading}: 
 
-\section{Sequence with Instructions for Week 4}
-\label{seq:4}
+% \section{Sequence with Instructions for Week 4}
+% \label{seq:4}
 
 \pose{\tad{} \PC{4}{1}}
 \tadMarginFig{}
@@ -1140,19 +1184,19 @@ towards \sarv{} (\ekapadsarv{} from \ardhal{} on chair).
 % \viraiMarginFig{}
 
 \viraiFig{}
-Start with \vim{}
+Start with \vim{}.
 
-Arms into \urdhast{}
+Arms into \urdhast{}.
 
 Experiment with starting with hands on waist, then knee bend, then
 \vim{} arms, versus starting with \utthastpad{} hands before
 bending leg.
 
-Turn front foot 90\textdegree out, back foot 60\textdegree.
+Turn front foot 90\textdegree\ out, back foot 60\textdegree.
 
-Hands on waist
+Hands on waist.
 
-Bend front leg to a 90\textdegree angle
+Bend front leg to a 90\textdegree\ angle
 
 Keep trunk straight, perpendicular to floor.
 
@@ -1191,6 +1235,7 @@ Bend at hips, keeping back extended.
 \pose{\ardhal{} (from chair) \PC{4}{11}}
 \ardhalMarginFig{}
 
+\newpage
 
 \pose{\newpose{\ekapadsarv{}} from \newline
   \ardhal{} on chair \PC{4}{12}}
@@ -1202,6 +1247,8 @@ From \ardhal{}, left right leg straight towards ceiling.
 Keep back straight.
 
 Bring right leg down, repeat with left leg.
+
+\mbox{ }
 
 \mbox{ }
 
@@ -1249,8 +1296,8 @@ Bring right leg down, repeat with left leg.
 
 \textbf{Reading}: 
 
-\section{Sequence with Instructions for Week 5}
-\label{seq:5}
+% \section{Sequence with Instructions for Week 5}
+% \label{seq:5}
 
 \pose{\tad{} \PC{5}{1}}
 \tadMarginFig{}
@@ -1276,7 +1323,8 @@ Bring right leg down, repeat with left leg.
 \paschbadhastFig{}
 Hands behind back, hold elbows.
 
-Pull shoulder blades together.
+Pull shoulder blades together\actionnote{Shoulder blades towards each
+  other.}.
 
 Keep shoulders down, neck long, back straight.
 
@@ -1306,7 +1354,7 @@ Lower arm. Sweep left arm out and around to back. Bend elbow.
 Can hands clasp? If not, grab belt with right hand, then left
 hand. See if can walk hands towards each other along belt.
 
-Head up, abdomen in.
+Head up, shoulders down, abdomen in.
 
 \pose{\newpose{\paschnama{}}  \PC{5}{8}}
 % \paschnamaMarginFig{}
@@ -1426,16 +1474,17 @@ Hands: weight balanced left hand vs right hand. For each hand,
 weight balanced evenly front-to-back, pinky-to-thumb. Palms open,
 fingers spread apart.
 
-Arms: elbows straight
+Arms: elbows straight.
 
-Lengthen spine, raise buttocks toward ceiling
+Lengthen spine\actionnote{Lengthen spine, raise buttocks.}, raise
+buttocks toward ceiling.
 
-legs straight, knees open
+Legs straight, knees open.
 
 Come up on toes, left buttocks as high as possible.
 
-Now keep buttocks up high while lengthening calves and ankle to
-bring heels down towards floor.
+Now keep buttocks up high while lengthening calves and ankle to bring
+heels down towards floor\actionnote{heels towards floor.}.
 
 \pose{\utt{} \PC{5}{20}}
 \uttMarginFig{}
@@ -1459,6 +1508,8 @@ Repeat with feet together.
 Use belt if cannot grab toes.
 
 Start with concave back. Head looking up/forward.
+
+Pull against toes to lengthen back.
 
 Then release into head down.
 
@@ -1511,6 +1562,8 @@ Straighten back using hands.
 
 Bring hands higher on back (towards neck).
 
+
+\mbox{ }
 
 \mbox{ }
 
@@ -1578,8 +1631,8 @@ Hips should be over head.
 
 \textbf{Reading}: 
 
-\section{Sequence with Instructions for Week 6}
-\label{seq:6}
+% \section{Sequence with Instructions for Week 6}
+% \label{seq:6}
 
 \pose{\tad{} \PC{6}{1}}
 \tadMarginFig{}
@@ -1634,13 +1687,13 @@ Have a block available.
 Bend right knee, place right hand on floor about a foot in front
 of right foot.
 
-Left hand on waist
+Left hand on waist.
 
-Bring left foot in a little towards right foot
+Bring left foot in a little towards right foot.
 
-Raise left leg so parallel to floor
+Raise left leg so parallel to floor.
 
-Extend right leg
+Extend right leg.
 
 If cannot extend right leg with hand on floor, put right hand on
 block.
@@ -1657,9 +1710,11 @@ If balance is an issue, can do this pose against wall.
 
 \parsvoFig{}
 
-\mbox{ }
+Go through concave stage first.
 
-\mbox{ }
+Concentrate on extension.
+
+Use blocks if necessary.
 
 \mbox{ }
 
